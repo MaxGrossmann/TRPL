@@ -1,0 +1,806 @@
+Warning: no access to tty (Bad file descriptor).
+Thus no job control in this shell.
+Warning: no access to tty (Bad file descriptor).
+Thus no job control in this shell.
+Tue Dec 21 20:07:20 CET 2021
+/usr/scratch4/magr4985/TRPL/BatchJobs/syn_data_3/Run22
+# Thread: 4
+5797995121610335221 RNG Seed
+Run 1
+Starting optimization with optimizer DiffEvoOpt{FitPopulation{Float64}, RadiusLimitedSelector, BlackBoxOptim.DiffEvoRandBin{3}, RandomBound{ContinuousRectSearchSpace}}
+0.00 secs, 0 evals, 0 steps
+30.00 secs, 4561 evals, 4478 steps, improv/step: 0.392 (last = 0.3921), fitness=-24725490.171655893
+60.00 secs, 9876 evals, 9793 steps, improv/step: 0.310 (last = 0.2401), fitness=-25513345.287560739
+90.03 secs, 15558 evals, 15475 steps, improv/step: 0.255 (last = 0.1598), fitness=-25581058.421566263
+120.03 secs, 21520 evals, 21437 steps, improv/step: 0.226 (last = 0.1506), fitness=-25585125.290313225
+150.03 secs, 27632 evals, 27549 steps, improv/step: 0.208 (last = 0.1438), fitness=-25586178.000541944
+180.11 secs, 33400 evals, 33318 steps, improv/step: 0.196 (last = 0.1406), fitness=-25586706.116438769
+210.11 secs, 39129 evals, 39047 steps, improv/step: 0.186 (last = 0.1252), fitness=-25587108.876146674
+240.15 secs, 44774 evals, 44692 steps, improv/step: 0.177 (last = 0.1178), fitness=-25587330.799095370
+270.15 secs, 50101 evals, 50020 steps, improv/step: 0.169 (last = 0.0980), fitness=-25587524.574535023
+300.15 secs, 55467 evals, 55387 steps, improv/step: 0.160 (last = 0.0756), fitness=-25587606.711569920
+330.16 secs, 60720 evals, 60640 steps, improv/step: 0.152 (last = 0.0725), fitness=-25587648.969220676
+360.16 secs, 66262 evals, 66182 steps, improv/step: 0.146 (last = 0.0754), fitness=-25593109.247456674
+390.16 secs, 71084 evals, 71004 steps, improv/step: 0.151 (last = 0.2244), fitness=-25776438.330482565
+420.17 secs, 75433 evals, 75353 steps, improv/step: 0.153 (last = 0.1814), fitness=-25800593.793357607
+450.17 secs, 79775 evals, 79695 steps, improv/step: 0.153 (last = 0.1550), fitness=-25819757.929958262
+480.17 secs, 83905 evals, 83825 steps, improv/step: 0.152 (last = 0.1370), fitness=-25839486.838292778
+510.18 secs, 88201 evals, 88121 steps, improv/step: 0.150 (last = 0.1085), fitness=-25851142.646252979
+540.18 secs, 92489 evals, 92409 steps, improv/step: 0.148 (last = 0.1075), fitness=-25859268.367426284
+570.18 secs, 96943 evals, 96863 steps, improv/step: 0.147 (last = 0.1313), fitness=-25864601.455470547
+600.20 secs, 101265 evals, 101185 steps, improv/step: 0.145 (last = 0.1064), fitness=-25867687.732592523
+630.20 secs, 105417 evals, 105337 steps, improv/step: 0.144 (last = 0.1057), fitness=-25871454.693339631
+660.20 secs, 109599 evals, 109519 steps, improv/step: 0.143 (last = 0.1110), fitness=-25874445.554526303
+690.21 secs, 113827 evals, 113747 steps, improv/step: 0.140 (last = 0.0762), fitness=-25876897.252532206
+720.21 secs, 118076 evals, 117996 steps, improv/step: 0.138 (last = 0.0878), fitness=-25878235.300769705
+750.21 secs, 122173 evals, 122093 steps, improv/step: 0.136 (last = 0.0803), fitness=-25878838.506241664
+780.21 secs, 126317 evals, 126237 steps, improv/step: 0.135 (last = 0.1018), fitness=-25879555.886401482
+810.22 secs, 130375 evals, 130295 steps, improv/step: 0.134 (last = 0.1092), fitness=-25879958.582672149
+840.22 secs, 134276 evals, 134196 steps, improv/step: 0.133 (last = 0.0872), fitness=-25880321.235277683
+870.27 secs, 138052 evals, 137972 steps, improv/step: 0.132 (last = 0.0943), fitness=-25880566.603366457
+900.28 secs, 141878 evals, 141798 steps, improv/step: 0.131 (last = 0.0933), fitness=-25880931.654391412
+930.28 secs, 145625 evals, 145546 steps, improv/step: 0.130 (last = 0.0942), fitness=-25881223.199094485
+960.29 secs, 149345 evals, 149266 steps, improv/step: 0.129 (last = 0.0949), fitness=-25881351.885519337
+990.31 secs, 152934 evals, 152855 steps, improv/step: 0.128 (last = 0.1003), fitness=-25881433.910029247
+1020.31 secs, 156566 evals, 156487 steps, improv/step: 0.128 (last = 0.1159), fitness=-25881499.979190737
+1050.32 secs, 159992 evals, 159914 steps, improv/step: 0.128 (last = 0.1170), fitness=-25881527.010156147
+1080.33 secs, 163420 evals, 163342 steps, improv/step: 0.127 (last = 0.1065), fitness=-25881549.472693555
+1110.33 secs, 166862 evals, 166784 steps, improv/step: 0.127 (last = 0.1011), fitness=-25881575.274511568
+1140.34 secs, 170349 evals, 170271 steps, improv/step: 0.126 (last = 0.0926), fitness=-25881595.297421865
+1170.34 secs, 173760 evals, 173682 steps, improv/step: 0.125 (last = 0.0885), fitness=-25881603.936019488
+1200.34 secs, 176986 evals, 176908 steps, improv/step: 0.125 (last = 0.0911), fitness=-25881609.824831903
+1230.35 secs, 180300 evals, 180222 steps, improv/step: 0.124 (last = 0.0803), fitness=-25881612.120587390
+1260.35 secs, 183589 evals, 183511 steps, improv/step: 0.123 (last = 0.0708), fitness=-25881612.947008781
+1290.41 secs, 186872 evals, 186794 steps, improv/step: 0.122 (last = 0.0640), fitness=-25881613.640446689
+1320.42 secs, 190261 evals, 190183 steps, improv/step: 0.121 (last = 0.0808), fitness=-25881615.297795210
+1350.42 secs, 193591 evals, 193513 steps, improv/step: 0.121 (last = 0.0814), fitness=-25881616.638944678
+1380.42 secs, 196905 evals, 196827 steps, improv/step: 0.120 (last = 0.0670), fitness=-25881618.395560034
+1410.42 secs, 200269 evals, 200191 steps, improv/step: 0.119 (last = 0.0544), fitness=-25881619.751447938
+1440.42 secs, 203607 evals, 203529 steps, improv/step: 0.118 (last = 0.0515), fitness=-25881623.067455687
+1470.43 secs, 206973 evals, 206896 steps, improv/step: 0.116 (last = 0.0466), fitness=-25881624.488957137
+1500.51 secs, 210211 evals, 210136 steps, improv/step: 0.115 (last = 0.0519), fitness=-25881626.487286627
+1530.52 secs, 213493 evals, 213418 steps, improv/step: 0.115 (last = 0.0634), fitness=-25881628.867010817
+1560.52 secs, 216797 evals, 216723 steps, improv/step: 0.114 (last = 0.0587), fitness=-25881631.622632705
+1590.53 secs, 220304 evals, 220230 steps, improv/step: 0.113 (last = 0.0459), fitness=-25881634.391994201
+1620.53 secs, 223635 evals, 223561 steps, improv/step: 0.112 (last = 0.0519), fitness=-25881640.221979603
+1650.53 secs, 226943 evals, 226869 steps, improv/step: 0.111 (last = 0.0481), fitness=-25881642.045764111
+1680.53 secs, 230324 evals, 230252 steps, improv/step: 0.110 (last = 0.0488), fitness=-25881643.703040063
+1710.54 secs, 233667 evals, 233595 steps, improv/step: 0.109 (last = 0.0547), fitness=-25881645.511322748
+1740.55 secs, 237144 evals, 237072 steps, improv/step: 0.108 (last = 0.0515), fitness=-25881648.664388552
+1770.55 secs, 240548 evals, 240477 steps, improv/step: 0.107 (last = 0.0441), fitness=-25881651.914588124
+1800.55 secs, 243854 evals, 243783 steps, improv/step: 0.107 (last = 0.0563), fitness=-25881655.505235005
+1830.56 secs, 247203 evals, 247132 steps, improv/step: 0.106 (last = 0.0588), fitness=-25881657.218511667
+1860.56 secs, 250506 evals, 250435 steps, improv/step: 0.105 (last = 0.0466), fitness=-25881660.927840605
+1890.56 secs, 253869 evals, 253798 steps, improv/step: 0.104 (last = 0.0511), fitness=-25881665.700447168
+1920.56 secs, 257284 evals, 257213 steps, improv/step: 0.104 (last = 0.0480), fitness=-25881669.374872278
+1950.57 secs, 260652 evals, 260582 steps, improv/step: 0.103 (last = 0.0398), fitness=-25881674.450239662
+1980.57 secs, 264065 evals, 263995 steps, improv/step: 0.102 (last = 0.0325), fitness=-25881680.975992292
+2010.58 secs, 267372 evals, 267304 steps, improv/step: 0.101 (last = 0.0299), fitness=-25881681.489860896
+2040.58 secs, 270743 evals, 270676 steps, improv/step: 0.100 (last = 0.0383), fitness=-25881686.113889728
+2070.62 secs, 273977 evals, 273910 steps, improv/step: 0.100 (last = 0.0523), fitness=-25881688.733916748
+2100.63 secs, 277295 evals, 277228 steps, improv/step: 0.099 (last = 0.0564), fitness=-25881695.383646883
+2130.63 secs, 280614 evals, 280547 steps, improv/step: 0.099 (last = 0.0440), fitness=-25881699.548414320
+2160.63 secs, 283966 evals, 283899 steps, improv/step: 0.098 (last = 0.0450), fitness=-25881707.984798018
+2190.63 secs, 287254 evals, 287187 steps, improv/step: 0.097 (last = 0.0328), fitness=-25881711.138815917
+2220.63 secs, 290666 evals, 290599 steps, improv/step: 0.096 (last = 0.0261), fitness=-25881714.129665956
+2250.65 secs, 294069 evals, 294002 steps, improv/step: 0.096 (last = 0.0314), fitness=-25881714.977056764
+2280.65 secs, 297375 evals, 297308 steps, improv/step: 0.095 (last = 0.0312), fitness=-25881717.217102915
+2310.65 secs, 300700 evals, 300633 steps, improv/step: 0.094 (last = 0.0346), fitness=-25881720.762179326
+2340.66 secs, 303978 evals, 303911 steps, improv/step: 0.094 (last = 0.0323), fitness=-25881722.338524062
+2370.68 secs, 307295 evals, 307228 steps, improv/step: 0.093 (last = 0.0407), fitness=-25881726.066991180
+2400.69 secs, 310617 evals, 310550 steps, improv/step: 0.092 (last = 0.0355), fitness=-25881728.513683423
+2430.69 secs, 313914 evals, 313847 steps, improv/step: 0.092 (last = 0.0312), fitness=-25881731.318378441
+2460.70 secs, 317183 evals, 317117 steps, improv/step: 0.091 (last = 0.0306), fitness=-25881734.245167106
+2490.70 secs, 320405 evals, 320339 steps, improv/step: 0.091 (last = 0.0376), fitness=-25881738.672492675
+2520.70 secs, 323654 evals, 323588 steps, improv/step: 0.090 (last = 0.0354), fitness=-25881742.878022827
+2550.71 secs, 326993 evals, 326927 steps, improv/step: 0.090 (last = 0.0422), fitness=-25881747.062655069
+2580.71 secs, 330265 evals, 330199 steps, improv/step: 0.089 (last = 0.0406), fitness=-25881750.499321967
+2610.72 secs, 333502 evals, 333436 steps, improv/step: 0.089 (last = 0.0358), fitness=-25881756.613462843
+2640.72 secs, 336872 evals, 336806 steps, improv/step: 0.088 (last = 0.0421), fitness=-25881761.971131064
+2670.73 secs, 340233 evals, 340168 steps, improv/step: 0.088 (last = 0.0342), fitness=-25881764.555773571
+2700.73 secs, 343557 evals, 343492 steps, improv/step: 0.087 (last = 0.0367), fitness=-25881768.627535939
+2730.89 secs, 346759 evals, 346695 steps, improv/step: 0.087 (last = 0.0359), fitness=-25881772.422518894
+2760.89 secs, 350076 evals, 350014 steps, improv/step: 0.086 (last = 0.0331), fitness=-25881776.682498381
+2790.89 secs, 353371 evals, 353310 steps, improv/step: 0.086 (last = 0.0337), fitness=-25881778.527842376
+2820.98 secs, 356717 evals, 356656 steps, improv/step: 0.085 (last = 0.0347), fitness=-25881780.930666372
+2850.99 secs, 360007 evals, 359946 steps, improv/step: 0.085 (last = 0.0353), fitness=-25881783.840267695
+2880.99 secs, 363261 evals, 363200 steps, improv/step: 0.084 (last = 0.0375), fitness=-25881788.878612332
+2911.00 secs, 366631 evals, 366570 steps, improv/step: 0.084 (last = 0.0412), fitness=-25881793.362186052
+2941.00 secs, 369976 evals, 369915 steps, improv/step: 0.084 (last = 0.0499), fitness=-25881795.772126056
+2971.01 secs, 373246 evals, 373185 steps, improv/step: 0.083 (last = 0.0416), fitness=-25881797.508273944
+3001.01 secs, 376507 evals, 376446 steps, improv/step: 0.083 (last = 0.0316), fitness=-25881799.152052976
+3031.02 secs, 379753 evals, 379692 steps, improv/step: 0.082 (last = 0.0320), fitness=-25881801.195406966
+3061.02 secs, 383015 evals, 382954 steps, improv/step: 0.082 (last = 0.0432), fitness=-25881803.222999878
+3091.03 secs, 386218 evals, 386157 steps, improv/step: 0.082 (last = 0.0378), fitness=-25881805.597966708
+3121.03 secs, 389557 evals, 389497 steps, improv/step: 0.081 (last = 0.0476), fitness=-25881806.806324348
+3151.03 secs, 392851 evals, 392791 steps, improv/step: 0.081 (last = 0.0404), fitness=-25881808.280859821
+3181.04 secs, 396212 evals, 396153 steps, improv/step: 0.081 (last = 0.0369), fitness=-25881809.388130926
+3211.04 secs, 399560 evals, 399501 steps, improv/step: 0.080 (last = 0.0550), fitness=-25881810.336940266
+3241.05 secs, 402963 evals, 402904 steps, improv/step: 0.080 (last = 0.0711), fitness=-25881811.297314771
+3271.06 secs, 406330 evals, 406271 steps, improv/step: 0.080 (last = 0.0843), fitness=-25881811.702363458
+3301.07 secs, 409717 evals, 409658 steps, improv/step: 0.080 (last = 0.0440), fitness=-25881812.528109580
+3331.08 secs, 413026 evals, 412967 steps, improv/step: 0.080 (last = 0.0474), fitness=-25881813.871920951
+3361.09 secs, 416326 evals, 416267 steps, improv/step: 0.079 (last = 0.0361), fitness=-25881814.484335087
+3391.09 secs, 419601 evals, 419542 steps, improv/step: 0.079 (last = 0.0385), fitness=-25881815.398005478
+3421.09 secs, 422862 evals, 422803 steps, improv/step: 0.079 (last = 0.0393), fitness=-25881816.472435169
+3451.09 secs, 426130 evals, 426072 steps, improv/step: 0.078 (last = 0.0407), fitness=-25881817.163531885
+3481.10 secs, 429404 evals, 429347 steps, improv/step: 0.078 (last = 0.0394), fitness=-25881818.151291028
+3511.10 secs, 432781 evals, 432725 steps, improv/step: 0.078 (last = 0.0524), fitness=-25881819.090395752
+3541.11 secs, 436106 evals, 436050 steps, improv/step: 0.078 (last = 0.0343), fitness=-25881820.366870783
+3571.18 secs, 439428 evals, 439372 steps, improv/step: 0.077 (last = 0.0385), fitness=-25881821.394410543
+3601.18 secs, 442638 evals, 442583 steps, improv/step: 0.077 (last = 0.0489), fitness=-25881822.392230254
+3631.19 secs, 445988 evals, 445933 steps, improv/step: 0.077 (last = 0.0457), fitness=-25881823.446996793
+3661.19 secs, 449272 evals, 449217 steps, improv/step: 0.077 (last = 0.0451), fitness=-25881825.908227708
+3691.19 secs, 452592 evals, 452537 steps, improv/step: 0.076 (last = 0.0452), fitness=-25881827.175378032
+3721.20 secs, 455869 evals, 455815 steps, improv/step: 0.076 (last = 0.0369), fitness=-25881828.072471544
+3751.20 secs, 459117 evals, 459064 steps, improv/step: 0.076 (last = 0.0311), fitness=-25881830.399055131
+3781.21 secs, 462320 evals, 462267 steps, improv/step: 0.076 (last = 0.0347), fitness=-25881831.215348814
+3811.21 secs, 465487 evals, 465434 steps, improv/step: 0.075 (last = 0.0350), fitness=-25881833.113218427
+3841.21 secs, 468707 evals, 468655 steps, improv/step: 0.075 (last = 0.0335), fitness=-25881834.214274805
+3871.22 secs, 471955 evals, 471903 steps, improv/step: 0.075 (last = 0.0314), fitness=-25881835.471246161
+3901.22 secs, 475190 evals, 475138 steps, improv/step: 0.074 (last = 0.0331), fitness=-25881837.524737857
+3931.23 secs, 478569 evals, 478519 steps, improv/step: 0.074 (last = 0.0299), fitness=-25881838.758541040
+3961.23 secs, 481914 evals, 481864 steps, improv/step: 0.074 (last = 0.0221), fitness=-25881839.313500352
+3991.23 secs, 485311 evals, 485261 steps, improv/step: 0.073 (last = 0.0247), fitness=-25881840.885862816
+4021.23 secs, 488633 evals, 488583 steps, improv/step: 0.073 (last = 0.0334), fitness=-25881841.737422626
+4051.24 secs, 491990 evals, 491940 steps, improv/step: 0.073 (last = 0.0271), fitness=-25881843.103078742
+4081.24 secs, 495311 evals, 495263 steps, improv/step: 0.073 (last = 0.0280), fitness=-25881845.036555536
+4111.24 secs, 498657 evals, 498610 steps, improv/step: 0.072 (last = 0.0296), fitness=-25881845.036555536
+4141.25 secs, 501907 evals, 501861 steps, improv/step: 0.072 (last = 0.0311), fitness=-25881846.233937792
+4171.32 secs, 505172 evals, 505126 steps, improv/step: 0.072 (last = 0.0358), fitness=-25881846.948672045
+4201.33 secs, 508417 evals, 508371 steps, improv/step: 0.072 (last = 0.0428), fitness=-25881848.626414388
+4231.33 secs, 511742 evals, 511696 steps, improv/step: 0.071 (last = 0.0418), fitness=-25881849.502068456
+4261.33 secs, 515063 evals, 515017 steps, improv/step: 0.071 (last = 0.0286), fitness=-25881851.078335989
+4291.34 secs, 518450 evals, 518405 steps, improv/step: 0.071 (last = 0.0239), fitness=-25881851.475175373
+4321.34 secs, 521799 evals, 521754 steps, improv/step: 0.071 (last = 0.0308), fitness=-25881852.493245423
+4351.35 secs, 525177 evals, 525132 steps, improv/step: 0.070 (last = 0.0370), fitness=-25881853.599881984
+4381.36 secs, 528515 evals, 528470 steps, improv/step: 0.070 (last = 0.0371), fitness=-25881854.272863787
+4411.37 secs, 531884 evals, 531840 steps, improv/step: 0.070 (last = 0.0264), fitness=-25881854.524073534
+4441.38 secs, 535328 evals, 535284 steps, improv/step: 0.070 (last = 0.0302), fitness=-25881855.351392787
+4471.38 secs, 538613 evals, 538569 steps, improv/step: 0.069 (last = 0.0411), fitness=-25881855.717686154
+4501.38 secs, 541935 evals, 541891 steps, improv/step: 0.069 (last = 0.0391), fitness=-25881856.474367276
+4531.38 secs, 545284 evals, 545241 steps, improv/step: 0.069 (last = 0.0430), fitness=-25881856.760479122
+4561.38 secs, 548530 evals, 548489 steps, improv/step: 0.069 (last = 0.0530), fitness=-25881857.174788553
+4591.39 secs, 551803 evals, 551763 steps, improv/step: 0.069 (last = 0.0397), fitness=-25881857.870754831
+4621.39 secs, 555078 evals, 555039 steps, improv/step: 0.069 (last = 0.0467), fitness=-25881858.260065448
+4651.40 secs, 558349 evals, 558310 steps, improv/step: 0.068 (last = 0.0388), fitness=-25881858.727515079
+4681.40 secs, 561624 evals, 561585 steps, improv/step: 0.068 (last = 0.0333), fitness=-25881858.884695090
+4711.40 secs, 564903 evals, 564864 steps, improv/step: 0.068 (last = 0.0323), fitness=-25881859.128613446
+4741.41 secs, 568307 evals, 568268 steps, improv/step: 0.068 (last = 0.0332), fitness=-25881859.313517675
+4771.42 secs, 571617 evals, 571578 steps, improv/step: 0.068 (last = 0.0492), fitness=-25881859.657430038
+4801.42 secs, 574926 evals, 574888 steps, improv/step: 0.068 (last = 0.0441), fitness=-25881860.006701048
+4831.43 secs, 578205 evals, 578167 steps, improv/step: 0.067 (last = 0.0436), fitness=-25881860.057634499
+4861.43 secs, 581486 evals, 581448 steps, improv/step: 0.067 (last = 0.0405), fitness=-25881860.325349286
+4891.43 secs, 584714 evals, 584676 steps, improv/step: 0.067 (last = 0.0468), fitness=-25881860.494479261
+4921.43 secs, 587986 evals, 587948 steps, improv/step: 0.067 (last = 0.0477), fitness=-25881860.730294835
+4951.44 secs, 591229 evals, 591191 steps, improv/step: 0.067 (last = 0.0419), fitness=-25881860.970794655
+4981.44 secs, 594572 evals, 594535 steps, improv/step: 0.067 (last = 0.0440), fitness=-25881861.185433015
+5011.44 secs, 597873 evals, 597836 steps, improv/step: 0.067 (last = 0.0403), fitness=-25881861.483542304
+5041.45 secs, 601150 evals, 601114 steps, improv/step: 0.067 (last = 0.0497), fitness=-25881861.788281713
+5071.45 secs, 604409 evals, 604374 steps, improv/step: 0.066 (last = 0.0429), fitness=-25881861.972810026
+5101.46 secs, 607622 evals, 607587 steps, improv/step: 0.066 (last = 0.0349), fitness=-25881862.259052269
+5131.46 secs, 610850 evals, 610815 steps, improv/step: 0.066 (last = 0.0313), fitness=-25881862.536958259
+5161.47 secs, 614102 evals, 614067 steps, improv/step: 0.066 (last = 0.0292), fitness=-25881862.536958259
+5191.47 secs, 617470 evals, 617435 steps, improv/step: 0.066 (last = 0.0321), fitness=-25881862.706124719
+5221.47 secs, 620779 evals, 620745 steps, improv/step: 0.066 (last = 0.0360), fitness=-25881862.793667220
+5251.48 secs, 623986 evals, 623952 steps, improv/step: 0.065 (last = 0.0368), fitness=-25881863.016658910
+5281.48 secs, 627205 evals, 627171 steps, improv/step: 0.065 (last = 0.0354), fitness=-25881863.150292587
+5311.48 secs, 630404 evals, 630370 steps, improv/step: 0.065 (last = 0.0313), fitness=-25881863.263956778
+5341.55 secs, 633561 evals, 633527 steps, improv/step: 0.065 (last = 0.0418), fitness=-25881863.376196302
+5371.55 secs, 636744 evals, 636710 steps, improv/step: 0.065 (last = 0.0358), fitness=-25881863.523783121
+5401.56 secs, 639944 evals, 639910 steps, improv/step: 0.065 (last = 0.0472), fitness=-25881863.648866102
+5431.56 secs, 643235 evals, 643201 steps, improv/step: 0.065 (last = 0.0398), fitness=-25881863.727851301
+5461.57 secs, 646545 evals, 646511 steps, improv/step: 0.064 (last = 0.0375), fitness=-25881863.885353632
+5491.57 secs, 649787 evals, 649753 steps, improv/step: 0.064 (last = 0.0271), fitness=-25881864.080651186
+5521.57 secs, 653015 evals, 652982 steps, improv/step: 0.064 (last = 0.0260), fitness=-25881864.348057773
+5551.58 secs, 656236 evals, 656203 steps, improv/step: 0.064 (last = 0.0326), fitness=-25881864.435028385
+5581.58 secs, 659493 evals, 659460 steps, improv/step: 0.064 (last = 0.0301), fitness=-25881864.748502981
+5611.67 secs, 662787 evals, 662754 steps, improv/step: 0.064 (last = 0.0325), fitness=-25881864.841996953
+5641.68 secs, 665994 evals, 665962 steps, improv/step: 0.063 (last = 0.0243), fitness=-25881864.998101048
+5671.68 secs, 669359 evals, 669327 steps, improv/step: 0.063 (last = 0.0267), fitness=-25881865.185668223
+5701.69 secs, 672740 evals, 672709 steps, improv/step: 0.063 (last = 0.0302), fitness=-25881865.373068847
+5731.75 secs, 676091 evals, 676062 steps, improv/step: 0.063 (last = 0.0376), fitness=-25881865.490186863
+5761.77 secs, 679313 evals, 679285 steps, improv/step: 0.063 (last = 0.0251), fitness=-25881865.550440416
+5791.83 secs, 682538 evals, 682510 steps, improv/step: 0.063 (last = 0.0211), fitness=-25881865.649580561
+5821.84 secs, 685789 evals, 685761 steps, improv/step: 0.062 (last = 0.0225), fitness=-25881865.664358832
+5851.84 secs, 689049 evals, 689022 steps, improv/step: 0.062 (last = 0.0233), fitness=-25881865.717824958
+5881.85 secs, 692424 evals, 692397 steps, improv/step: 0.062 (last = 0.0151), fitness=-25881865.749577172
+5911.86 secs, 695798 evals, 695772 steps, improv/step: 0.062 (last = 0.0210), fitness=-25881865.778867081
+5941.86 secs, 699123 evals, 699098 steps, improv/step: 0.062 (last = 0.0180), fitness=-25881865.832016140
+5971.86 secs, 702587 evals, 702562 steps, improv/step: 0.061 (last = 0.0211), fitness=-25881865.901088007
+6001.86 secs, 705986 evals, 705961 steps, improv/step: 0.061 (last = 0.0288), fitness=-25881865.912096456
+6031.87 secs, 709271 evals, 709247 steps, improv/step: 0.061 (last = 0.0307), fitness=-25881865.934255820
+6061.87 secs, 712619 evals, 712595 steps, improv/step: 0.061 (last = 0.0382), fitness=-25881865.990374342
+6091.87 secs, 715903 evals, 715879 steps, improv/step: 0.061 (last = 0.0347), fitness=-25881866.046686135
+6121.88 secs, 719287 evals, 719263 steps, improv/step: 0.061 (last = 0.0331), fitness=-25881866.059574895
+6151.88 secs, 722587 evals, 722563 steps, improv/step: 0.061 (last = 0.0291), fitness=-25881866.081203047
+6181.88 secs, 725731 evals, 725707 steps, improv/step: 0.060 (last = 0.0340), fitness=-25881866.102989513
+6211.88 secs, 728904 evals, 728880 steps, improv/step: 0.060 (last = 0.0325), fitness=-25881866.112438086
+6241.98 secs, 732205 evals, 732182 steps, improv/step: 0.060 (last = 0.0376), fitness=-25881866.158210479
+6271.99 secs, 735459 evals, 735437 steps, improv/step: 0.060 (last = 0.0227), fitness=-25881866.177639011
+6301.99 secs, 738814 evals, 738792 steps, improv/step: 0.060 (last = 0.0265), fitness=-25881866.194271576
+6332.00 secs, 742062 evals, 742042 steps, improv/step: 0.060 (last = 0.0302), fitness=-25881866.218721639
+6362.00 secs, 745370 evals, 745350 steps, improv/step: 0.060 (last = 0.0254), fitness=-25881866.251952540
+6392.01 secs, 748712 evals, 748693 steps, improv/step: 0.059 (last = 0.0326), fitness=-25881866.260571595
+6422.01 secs, 751975 evals, 751956 steps, improv/step: 0.059 (last = 0.0310), fitness=-25881866.277625423
+6452.01 secs, 755226 evals, 755207 steps, improv/step: 0.059 (last = 0.0295), fitness=-25881866.295809288
+6482.02 secs, 758392 evals, 758373 steps, improv/step: 0.059 (last = 0.0300), fitness=-25881866.308462083
+6512.02 secs, 761738 evals, 761721 steps, improv/step: 0.059 (last = 0.0284), fitness=-25881866.314282000
+6542.03 secs, 765038 evals, 765021 steps, improv/step: 0.059 (last = 0.0318), fitness=-25881866.322502155
+6572.03 secs, 768354 evals, 768337 steps, improv/step: 0.059 (last = 0.0265), fitness=-25881866.335261397
+6602.03 secs, 771603 evals, 771586 steps, improv/step: 0.059 (last = 0.0308), fitness=-25881866.344039060
+6632.04 secs, 774867 evals, 774850 steps, improv/step: 0.059 (last = 0.0466), fitness=-25881866.361161310
+6662.08 secs, 778202 evals, 778185 steps, improv/step: 0.058 (last = 0.0333), fitness=-25881866.373040408
+6692.08 secs, 781474 evals, 781457 steps, improv/step: 0.058 (last = 0.0416), fitness=-25881866.389076483
+6722.09 secs, 784764 evals, 784747 steps, improv/step: 0.058 (last = 0.0334), fitness=-25881866.420478590
+6752.09 secs, 788130 evals, 788113 steps, improv/step: 0.058 (last = 0.0333), fitness=-25881866.430433296
+6782.09 secs, 791546 evals, 791529 steps, improv/step: 0.058 (last = 0.0419), fitness=-25881866.445690352
+6812.09 secs, 794858 evals, 794841 steps, improv/step: 0.058 (last = 0.0447), fitness=-25881866.469935220
+6842.10 secs, 798180 evals, 798163 steps, improv/step: 0.058 (last = 0.0349), fitness=-25881866.494387724
+6872.11 secs, 801487 evals, 801470 steps, improv/step: 0.058 (last = 0.0314), fitness=-25881866.530081779
+6902.12 secs, 804782 evals, 804766 steps, improv/step: 0.058 (last = 0.0346), fitness=-25881866.550507225
+6932.12 secs, 808074 evals, 808058 steps, improv/step: 0.058 (last = 0.0276), fitness=-25881866.577919129
+6962.13 secs, 811486 evals, 811470 steps, improv/step: 0.057 (last = 0.0243), fitness=-25881866.606165428
+6992.13 secs, 814855 evals, 814839 steps, improv/step: 0.057 (last = 0.0175), fitness=-25881866.628571287
+7022.14 secs, 818213 evals, 818197 steps, improv/step: 0.057 (last = 0.0188), fitness=-25881866.638688914
+7052.14 secs, 821665 evals, 821649 steps, improv/step: 0.057 (last = 0.0223), fitness=-25881866.677165546
+7082.14 secs, 825241 evals, 825225 steps, improv/step: 0.057 (last = 0.0182), fitness=-25881866.680450995
+7112.15 secs, 828801 evals, 828785 steps, improv/step: 0.057 (last = 0.0191), fitness=-25881866.719353646
+7142.15 secs, 832193 evals, 832177 steps, improv/step: 0.057 (last = 0.0227), fitness=-25881866.719353646
+7172.16 secs, 835633 evals, 835617 steps, improv/step: 0.056 (last = 0.0218), fitness=-25881866.737433903
+7202.16 secs, 839091 evals, 839075 steps, improv/step: 0.056 (last = 0.0223), fitness=-25881866.747735299
+7232.17 secs, 842469 evals, 842453 steps, improv/step: 0.056 (last = 0.0296), fitness=-25881866.771097820
+7262.18 secs, 845888 evals, 845873 steps, improv/step: 0.056 (last = 0.0257), fitness=-25881866.773832541
+7292.18 secs, 849333 evals, 849319 steps, improv/step: 0.056 (last = 0.0212), fitness=-25881866.798424322
+7322.19 secs, 852777 evals, 852763 steps, improv/step: 0.056 (last = 0.0197), fitness=-25881866.814431541
+7352.19 secs, 856171 evals, 856157 steps, improv/step: 0.056 (last = 0.0174), fitness=-25881866.841832511
+7382.29 secs, 859561 evals, 859548 steps, improv/step: 0.055 (last = 0.0174), fitness=-25881866.872653536
+7412.29 secs, 862996 evals, 862984 steps, improv/step: 0.055 (last = 0.0160), fitness=-25881866.888968676
+7442.29 secs, 866393 evals, 866382 steps, improv/step: 0.055 (last = 0.0177), fitness=-25881866.899870008
+7472.29 secs, 869848 evals, 869837 steps, improv/step: 0.055 (last = 0.0205), fitness=-25881866.915117927
+7502.30 secs, 873470 evals, 873459 steps, improv/step: 0.055 (last = 0.0144), fitness=-25881866.927157726
+7532.35 secs, 876931 evals, 876920 steps, improv/step: 0.055 (last = 0.0104), fitness=-25881866.931931410
+7562.36 secs, 880421 evals, 880410 steps, improv/step: 0.054 (last = 0.0138), fitness=-25881866.975978993
+7592.37 secs, 883870 evals, 883860 steps, improv/step: 0.054 (last = 0.0148), fitness=-25881866.975978993
+7622.37 secs, 887253 evals, 887244 steps, improv/step: 0.054 (last = 0.0174), fitness=-25881866.975978993
+7652.38 secs, 890622 evals, 890614 steps, improv/step: 0.054 (last = 0.0119), fitness=-25881866.996511877
+7682.39 secs, 893908 evals, 893900 steps, improv/step: 0.054 (last = 0.0110), fitness=-25881866.996511877
+7712.39 secs, 897270 evals, 897263 steps, improv/step: 0.054 (last = 0.0137), fitness=-25881866.997212052
+7742.39 secs, 900736 evals, 900730 steps, improv/step: 0.054 (last = 0.0138), fitness=-25881867.016837768
+7772.39 secs, 904210 evals, 904204 steps, improv/step: 0.053 (last = 0.0112), fitness=-25881867.016837768
+7802.40 secs, 907697 evals, 907691 steps, improv/step: 0.053 (last = 0.0155), fitness=-25881867.027295887
+7832.40 secs, 911199 evals, 911194 steps, improv/step: 0.053 (last = 0.0220), fitness=-25881867.030296091
+7862.41 secs, 914590 evals, 914585 steps, improv/step: 0.053 (last = 0.0186), fitness=-25881867.034378886
+7892.41 secs, 917998 evals, 917993 steps, improv/step: 0.053 (last = 0.0164), fitness=-25881867.037558559
+7922.49 secs, 921400 evals, 921395 steps, improv/step: 0.053 (last = 0.0170), fitness=-25881867.040880132
+7952.50 secs, 924782 evals, 924777 steps, improv/step: 0.053 (last = 0.0174), fitness=-25881867.043381792
+7982.50 secs, 928262 evals, 928257 steps, improv/step: 0.052 (last = 0.0152), fitness=-25881867.044518180
+8012.51 secs, 931614 evals, 931609 steps, improv/step: 0.052 (last = 0.0182), fitness=-25881867.045484077
+8042.51 secs, 934913 evals, 934908 steps, improv/step: 0.052 (last = 0.0158), fitness=-25881867.046726614
+8072.52 secs, 938301 evals, 938297 steps, improv/step: 0.052 (last = 0.0204), fitness=-25881867.046730630
+8102.52 secs, 941689 evals, 941685 steps, improv/step: 0.052 (last = 0.0236), fitness=-25881867.048853889
+8132.52 secs, 945161 evals, 945157 steps, improv/step: 0.052 (last = 0.0216), fitness=-25881867.049484760
+8162.53 secs, 948602 evals, 948598 steps, improv/step: 0.052 (last = 0.0224), fitness=-25881867.050186377
+8192.53 secs, 951978 evals, 951974 steps, improv/step: 0.052 (last = 0.0264), fitness=-25881867.050520413
+8222.54 secs, 955481 evals, 955477 steps, improv/step: 0.052 (last = 0.0291), fitness=-25881867.050785020
+8252.54 secs, 959041 evals, 959037 steps, improv/step: 0.052 (last = 0.0306), fitness=-25881867.051255357
+8282.55 secs, 962570 evals, 962567 steps, improv/step: 0.051 (last = 0.0235), fitness=-25881867.051701501
+8312.55 secs, 965984 evals, 965981 steps, improv/step: 0.051 (last = 0.0196), fitness=-25881867.051748853
+8342.56 secs, 969315 evals, 969312 steps, improv/step: 0.051 (last = 0.0225), fitness=-25881867.052005671
+8372.56 secs, 972683 evals, 972680 steps, improv/step: 0.051 (last = 0.0255), fitness=-25881867.052196804
+8402.56 secs, 976086 evals, 976085 steps, improv/step: 0.051 (last = 0.0302), fitness=-25881867.052273110
+8432.56 secs, 979448 evals, 979448 steps, improv/step: 0.051 (last = 0.0285), fitness=-25881867.052388657
+8462.56 secs, 982853 evals, 982853 steps, improv/step: 0.051 (last = 0.0258), fitness=-25881867.052456371
+8492.57 secs, 986203 evals, 986203 steps, improv/step: 0.051 (last = 0.0257), fitness=-25881867.052641030
+8522.57 secs, 989538 evals, 989538 steps, improv/step: 0.051 (last = 0.0291), fitness=-25881867.052920174
+8552.57 secs, 992915 evals, 992915 steps, improv/step: 0.051 (last = 0.0267), fitness=-25881867.053301953
+8582.57 secs, 996284 evals, 996284 steps, improv/step: 0.051 (last = 0.0273), fitness=-25881867.053566966
+8612.57 secs, 999637 evals, 999638 steps, improv/step: 0.050 (last = 0.0230), fitness=-25881867.054074530
+8642.57 secs, 1003051 evals, 1003053 steps, improv/step: 0.050 (last = 0.0313), fitness=-25881867.054545965
+8672.58 secs, 1006400 evals, 1006403 steps, improv/step: 0.050 (last = 0.0304), fitness=-25881867.054908987
+8702.59 secs, 1009755 evals, 1009758 steps, improv/step: 0.050 (last = 0.0343), fitness=-25881867.055510119
+8732.59 secs, 1013106 evals, 1013109 steps, improv/step: 0.050 (last = 0.0281), fitness=-25881867.056012228
+8762.59 secs, 1016545 evals, 1016549 steps, improv/step: 0.050 (last = 0.0276), fitness=-25881867.056105662
+8792.60 secs, 1019910 evals, 1019914 steps, improv/step: 0.050 (last = 0.0247), fitness=-25881867.056827612
+8822.60 secs, 1023327 evals, 1023331 steps, improv/step: 0.050 (last = 0.0272), fitness=-25881867.057206798
+8852.61 secs, 1026715 evals, 1026719 steps, improv/step: 0.050 (last = 0.0269), fitness=-25881867.057472825
+8882.61 secs, 1030013 evals, 1030017 steps, improv/step: 0.050 (last = 0.0252), fitness=-25881867.057867620
+8912.61 secs, 1033421 evals, 1033425 steps, improv/step: 0.050 (last = 0.0329), fitness=-25881867.058719907
+8942.61 secs, 1036801 evals, 1036805 steps, improv/step: 0.050 (last = 0.0275), fitness=-25881867.059274353
+8972.62 secs, 1040224 evals, 1040229 steps, improv/step: 0.050 (last = 0.0301), fitness=-25881867.059672009
+9002.69 secs, 1043722 evals, 1043728 steps, improv/step: 0.050 (last = 0.0312), fitness=-25881867.060166322
+9032.72 secs, 1047143 evals, 1047149 steps, improv/step: 0.050 (last = 0.0298), fitness=-25881867.061167300
+9062.73 secs, 1050468 evals, 1050475 steps, improv/step: 0.049 (last = 0.0310), fitness=-25881867.061528657
+9092.73 secs, 1053779 evals, 1053786 steps, improv/step: 0.049 (last = 0.0287), fitness=-25881867.061826382
+9122.73 secs, 1057143 evals, 1057150 steps, improv/step: 0.049 (last = 0.0333), fitness=-25881867.062601343
+9152.74 secs, 1060460 evals, 1060467 steps, improv/step: 0.049 (last = 0.0308), fitness=-25881867.063167982
+9182.75 secs, 1063777 evals, 1063784 steps, improv/step: 0.049 (last = 0.0286), fitness=-25881867.064011768
+9212.75 secs, 1067189 evals, 1067196 steps, improv/step: 0.049 (last = 0.0328), fitness=-25881867.064291634
+9242.76 secs, 1070670 evals, 1070677 steps, improv/step: 0.049 (last = 0.0322), fitness=-25881867.064576879
+9272.78 secs, 1074105 evals, 1074115 steps, improv/step: 0.049 (last = 0.0221), fitness=-25881867.064872418
+9302.80 secs, 1077465 evals, 1077475 steps, improv/step: 0.049 (last = 0.0271), fitness=-25881867.065144252
+9332.80 secs, 1080877 evals, 1080887 steps, improv/step: 0.049 (last = 0.0237), fitness=-25881867.065561980
+9362.80 secs, 1084313 evals, 1084324 steps, improv/step: 0.049 (last = 0.0329), fitness=-25881867.065785725
+9392.80 secs, 1087684 evals, 1087695 steps, improv/step: 0.049 (last = 0.0311), fitness=-25881867.066487629
+9422.80 secs, 1091048 evals, 1091059 steps, improv/step: 0.049 (last = 0.0265), fitness=-25881867.066595454
+9452.81 secs, 1094388 evals, 1094399 steps, improv/step: 0.049 (last = 0.0207), fitness=-25881867.066901386
+9482.81 secs, 1097742 evals, 1097753 steps, improv/step: 0.049 (last = 0.0194), fitness=-25881867.067527648
+9512.81 secs, 1101112 evals, 1101123 steps, improv/step: 0.048 (last = 0.0208), fitness=-25881867.067644164
+9542.82 secs, 1104454 evals, 1104465 steps, improv/step: 0.048 (last = 0.0239), fitness=-25881867.067793868
+9572.82 secs, 1107877 evals, 1107888 steps, improv/step: 0.048 (last = 0.0251), fitness=-25881867.067908142
+9602.82 secs, 1111237 evals, 1111248 steps, improv/step: 0.048 (last = 0.0289), fitness=-25881867.068250522
+9632.83 secs, 1114678 evals, 1114689 steps, improv/step: 0.048 (last = 0.0282), fitness=-25881867.068375736
+9662.83 secs, 1118149 evals, 1118160 steps, improv/step: 0.048 (last = 0.0349), fitness=-25881867.068794470
+9692.83 secs, 1121627 evals, 1121638 steps, improv/step: 0.048 (last = 0.0256), fitness=-25881867.069177791
+9722.84 secs, 1125103 evals, 1125114 steps, improv/step: 0.048 (last = 0.0288), fitness=-25881867.069508575
+9752.87 secs, 1128621 evals, 1128633 steps, improv/step: 0.048 (last = 0.0247), fitness=-25881867.069956817
+9782.87 secs, 1132171 evals, 1132183 steps, improv/step: 0.048 (last = 0.0225), fitness=-25881867.070074048
+9812.97 secs, 1135553 evals, 1135565 steps, improv/step: 0.048 (last = 0.0210), fitness=-25881867.070328128
+9842.98 secs, 1138907 evals, 1138919 steps, improv/step: 0.048 (last = 0.0239), fitness=-25881867.070884988
+9872.99 secs, 1142354 evals, 1142367 steps, improv/step: 0.048 (last = 0.0244), fitness=-25881867.071180858
+9902.99 secs, 1145718 evals, 1145731 steps, improv/step: 0.048 (last = 0.0250), fitness=-25881867.071318585
+9932.99 secs, 1149168 evals, 1149182 steps, improv/step: 0.047 (last = 0.0241), fitness=-25881867.071596347
+9963.00 secs, 1152611 evals, 1152626 steps, improv/step: 0.047 (last = 0.0180), fitness=-25881867.071715921
+9993.00 secs, 1155871 evals, 1155887 steps, improv/step: 0.047 (last = 0.0196), fitness=-25881867.071773879
+10023.00 secs, 1159249 evals, 1159265 steps, improv/step: 0.047 (last = 0.0189), fitness=-25881867.072070032
+10053.01 secs, 1162646 evals, 1162663 steps, improv/step: 0.047 (last = 0.0188), fitness=-25881867.072197564
+10083.02 secs, 1166104 evals, 1166122 steps, improv/step: 0.047 (last = 0.0150), fitness=-25881867.072512127
+10113.02 secs, 1169580 evals, 1169598 steps, improv/step: 0.047 (last = 0.0155), fitness=-25881867.072727133
+10143.03 secs, 1173050 evals, 1173068 steps, improv/step: 0.047 (last = 0.0182), fitness=-25881867.072960462
+10173.03 secs, 1176548 evals, 1176567 steps, improv/step: 0.047 (last = 0.0194), fitness=-25881867.073176622
+10203.03 secs, 1180011 evals, 1180030 steps, improv/step: 0.047 (last = 0.0156), fitness=-25881867.073294342
+10233.04 secs, 1183478 evals, 1183497 steps, improv/step: 0.047 (last = 0.0138), fitness=-25881867.073332906
+10263.04 secs, 1186979 evals, 1186998 steps, improv/step: 0.047 (last = 0.0143), fitness=-25881867.073472675
+10293.05 secs, 1190389 evals, 1190408 steps, improv/step: 0.046 (last = 0.0126), fitness=-25881867.073617321
+10323.05 secs, 1193905 evals, 1193924 steps, improv/step: 0.046 (last = 0.0125), fitness=-25881867.073746234
+10353.05 secs, 1197293 evals, 1197312 steps, improv/step: 0.046 (last = 0.0115), fitness=-25881867.073786974
+10383.05 secs, 1200741 evals, 1200760 steps, improv/step: 0.046 (last = 0.0122), fitness=-25881867.073797345
+10413.06 secs, 1204169 evals, 1204188 steps, improv/step: 0.046 (last = 0.0146), fitness=-25881867.073945429
+10443.07 secs, 1207712 evals, 1207734 steps, improv/step: 0.046 (last = 0.0161), fitness=-25881867.073986888
+10473.07 secs, 1211264 evals, 1211286 steps, improv/step: 0.046 (last = 0.0166), fitness=-25881867.074025147
+10503.08 secs, 1214640 evals, 1214662 steps, improv/step: 0.046 (last = 0.0127), fitness=-25881867.074098855
+10533.08 secs, 1218140 evals, 1218162 steps, improv/step: 0.046 (last = 0.0151), fitness=-25881867.074098855
+10563.08 secs, 1221444 evals, 1221468 steps, improv/step: 0.046 (last = 0.0133), fitness=-25881867.074098855
+10593.08 secs, 1224778 evals, 1224802 steps, improv/step: 0.046 (last = 0.0219), fitness=-25881867.074099176
+10623.08 secs, 1228167 evals, 1228191 steps, improv/step: 0.045 (last = 0.0257), fitness=-25881867.074126754
+10653.09 secs, 1231479 evals, 1231503 steps, improv/step: 0.045 (last = 0.0299), fitness=-25881867.074143507
+10683.09 secs, 1234845 evals, 1234869 steps, improv/step: 0.045 (last = 0.0345), fitness=-25881867.074161597
+10713.09 secs, 1238140 evals, 1238164 steps, improv/step: 0.045 (last = 0.0319), fitness=-25881867.074170090
+10743.10 secs, 1241471 evals, 1241495 steps, improv/step: 0.045 (last = 0.0330), fitness=-25881867.074181728
+10773.10 secs, 1244908 evals, 1244932 steps, improv/step: 0.045 (last = 0.0358), fitness=-25881867.074186664
+10803.16 secs, 1248259 evals, 1248284 steps, improv/step: 0.045 (last = 0.0367), fitness=-25881867.074199550
+10833.17 secs, 1251612 evals, 1251638 steps, improv/step: 0.045 (last = 0.0230), fitness=-25881867.074215338
+10863.17 secs, 1254923 evals, 1254949 steps, improv/step: 0.045 (last = 0.0305), fitness=-25881867.074225426
+10893.18 secs, 1258378 evals, 1258404 steps, improv/step: 0.045 (last = 0.0194), fitness=-25881867.074235544
+10923.18 secs, 1261718 evals, 1261744 steps, improv/step: 0.045 (last = 0.0231), fitness=-25881867.074242998
+10953.19 secs, 1265110 evals, 1265136 steps, improv/step: 0.045 (last = 0.0236), fitness=-25881867.074247256
+10983.19 secs, 1268482 evals, 1268509 steps, improv/step: 0.045 (last = 0.0237), fitness=-25881867.074249957
+11013.19 secs, 1271796 evals, 1271823 steps, improv/step: 0.045 (last = 0.0181), fitness=-25881867.074264921
+11043.20 secs, 1275257 evals, 1275286 steps, improv/step: 0.045 (last = 0.0191), fitness=-25881867.074271999
+11073.20 secs, 1278630 evals, 1278660 steps, improv/step: 0.045 (last = 0.0228), fitness=-25881867.074274823
+11103.29 secs, 1281975 evals, 1282006 steps, improv/step: 0.045 (last = 0.0284), fitness=-25881867.074284274
+11133.29 secs, 1285262 evals, 1285293 steps, improv/step: 0.045 (last = 0.0265), fitness=-25881867.074291632
+11163.29 secs, 1288600 evals, 1288631 steps, improv/step: 0.045 (last = 0.0243), fitness=-25881867.074305702
+11193.29 secs, 1292041 evals, 1292072 steps, improv/step: 0.045 (last = 0.0232), fitness=-25881867.074313436
+11223.29 secs, 1295412 evals, 1295443 steps, improv/step: 0.045 (last = 0.0267), fitness=-25881867.074327044
+11253.33 secs, 1298786 evals, 1298817 steps, improv/step: 0.044 (last = 0.0350), fitness=-25881867.074339379
+11283.33 secs, 1302150 evals, 1302182 steps, improv/step: 0.044 (last = 0.0321), fitness=-25881867.074347470
+11313.34 secs, 1305637 evals, 1305669 steps, improv/step: 0.044 (last = 0.0252), fitness=-25881867.074361116
+11343.34 secs, 1309172 evals, 1309205 steps, improv/step: 0.044 (last = 0.0229), fitness=-25881867.074362904
+11373.34 secs, 1312627 evals, 1312660 steps, improv/step: 0.044 (last = 0.0284), fitness=-25881867.074368253
+11403.34 secs, 1316096 evals, 1316129 steps, improv/step: 0.044 (last = 0.0271), fitness=-25881867.074374188
+11433.35 secs, 1319613 evals, 1319647 steps, improv/step: 0.044 (last = 0.0267), fitness=-25881867.074378993
+11463.43 secs, 1323075 evals, 1323109 steps, improv/step: 0.044 (last = 0.0300), fitness=-25881867.074382577
+11493.47 secs, 1326565 evals, 1326599 steps, improv/step: 0.044 (last = 0.0275), fitness=-25881867.074383840
+11523.47 secs, 1329895 evals, 1329930 steps, improv/step: 0.044 (last = 0.0249), fitness=-25881867.074385159
+11553.51 secs, 1333232 evals, 1333268 steps, improv/step: 0.044 (last = 0.0291), fitness=-25881867.074387010
+11583.51 secs, 1336610 evals, 1336646 steps, improv/step: 0.044 (last = 0.0189), fitness=-25881867.074387752
+11613.52 secs, 1339972 evals, 1340009 steps, improv/step: 0.044 (last = 0.0211), fitness=-25881867.074387792
+11643.52 secs, 1343278 evals, 1343315 steps, improv/step: 0.044 (last = 0.0266), fitness=-25881867.074389737
+11673.52 secs, 1346674 evals, 1346711 steps, improv/step: 0.044 (last = 0.0289), fitness=-25881867.074390486
+11703.52 secs, 1350044 evals, 1350081 steps, improv/step: 0.044 (last = 0.0181), fitness=-25881867.074390836
+11733.52 secs, 1353369 evals, 1353406 steps, improv/step: 0.044 (last = 0.0205), fitness=-25881867.074392173
+11763.53 secs, 1356751 evals, 1356789 steps, improv/step: 0.044 (last = 0.0213), fitness=-25881867.074393347
+11793.53 secs, 1360093 evals, 1360131 steps, improv/step: 0.044 (last = 0.0338), fitness=-25881867.074394174
+11823.54 secs, 1363435 evals, 1363473 steps, improv/step: 0.044 (last = 0.0371), fitness=-25881867.074395761
+11853.54 secs, 1366798 evals, 1366839 steps, improv/step: 0.044 (last = 0.0297), fitness=-25881867.074396748
+11883.55 secs, 1370132 evals, 1370173 steps, improv/step: 0.044 (last = 0.0231), fitness=-25881867.074398644
+11913.56 secs, 1373557 evals, 1373598 steps, improv/step: 0.043 (last = 0.0266), fitness=-25881867.074401926
+11943.57 secs, 1377042 evals, 1377083 steps, improv/step: 0.043 (last = 0.0284), fitness=-25881867.074403316
+11973.58 secs, 1380566 evals, 1380607 steps, improv/step: 0.043 (last = 0.0219), fitness=-25881867.074405093
+12003.58 secs, 1384015 evals, 1384058 steps, improv/step: 0.043 (last = 0.0209), fitness=-25881867.074407965
+12033.58 secs, 1387575 evals, 1387618 steps, improv/step: 0.043 (last = 0.0194), fitness=-25881867.074408762
+12063.59 secs, 1391010 evals, 1391053 steps, improv/step: 0.043 (last = 0.0183), fitness=-25881867.074413627
+12093.60 secs, 1394305 evals, 1394348 steps, improv/step: 0.043 (last = 0.0188), fitness=-25881867.074414983
+12123.61 secs, 1397701 evals, 1397744 steps, improv/step: 0.043 (last = 0.0150), fitness=-25881867.074415669
+12153.61 secs, 1401096 evals, 1401140 steps, improv/step: 0.043 (last = 0.0183), fitness=-25881867.074418359
+12183.61 secs, 1404482 evals, 1404526 steps, improv/step: 0.043 (last = 0.0198), fitness=-25881867.074420903
+12213.62 secs, 1407812 evals, 1407856 steps, improv/step: 0.043 (last = 0.0192), fitness=-25881867.074423976
+12243.62 secs, 1411152 evals, 1411196 steps, improv/step: 0.043 (last = 0.0177), fitness=-25881867.074426524
+12273.63 secs, 1414387 evals, 1414431 steps, improv/step: 0.043 (last = 0.0170), fitness=-25881867.074428532
+12303.63 secs, 1417722 evals, 1417767 steps, improv/step: 0.043 (last = 0.0195), fitness=-25881867.074429195
+12333.66 secs, 1420987 evals, 1421034 steps, improv/step: 0.043 (last = 0.0162), fitness=-25881867.074430481
+12363.67 secs, 1424353 evals, 1424402 steps, improv/step: 0.043 (last = 0.0134), fitness=-25881867.074431282
+12393.67 secs, 1427685 evals, 1427735 steps, improv/step: 0.043 (last = 0.0210), fitness=-25881867.074434023
+12423.69 secs, 1431049 evals, 1431099 steps, improv/step: 0.043 (last = 0.0199), fitness=-25881867.074434429
+12453.70 secs, 1434450 evals, 1434500 steps, improv/step: 0.042 (last = 0.0162), fitness=-25881867.074435551
+12483.70 secs, 1437833 evals, 1437886 steps, improv/step: 0.042 (last = 0.0127), fitness=-25881867.074435651
+12513.71 secs, 1441288 evals, 1441343 steps, improv/step: 0.042 (last = 0.0153), fitness=-25881867.074436270
+12543.80 secs, 1444837 evals, 1444892 steps, improv/step: 0.042 (last = 0.0110), fitness=-25881867.074436419
+12573.81 secs, 1448276 evals, 1448331 steps, improv/step: 0.042 (last = 0.0122), fitness=-25881867.074436843
+12603.81 secs, 1451730 evals, 1451785 steps, improv/step: 0.042 (last = 0.0130), fitness=-25881867.074436929
+12633.82 secs, 1455108 evals, 1455163 steps, improv/step: 0.042 (last = 0.0115), fitness=-25881867.074437216
+12663.86 secs, 1458491 evals, 1458546 steps, improv/step: 0.042 (last = 0.0115), fitness=-25881867.074437216
+12693.87 secs, 1461990 evals, 1462045 steps, improv/step: 0.042 (last = 0.0109), fitness=-25881867.074437216
+12723.87 secs, 1465441 evals, 1465497 steps, improv/step: 0.042 (last = 0.0081), fitness=-25881867.074437622
+12753.88 secs, 1468838 evals, 1468894 steps, improv/step: 0.042 (last = 0.0130), fitness=-25881867.074437883
+12783.96 secs, 1472180 evals, 1472236 steps, improv/step: 0.042 (last = 0.0108), fitness=-25881867.074438017
+12813.97 secs, 1475454 evals, 1475510 steps, improv/step: 0.042 (last = 0.0122), fitness=-25881867.074438151
+12843.97 secs, 1478716 evals, 1478773 steps, improv/step: 0.042 (last = 0.0098), fitness=-25881867.074438579
+12873.98 secs, 1481942 evals, 1481999 steps, improv/step: 0.041 (last = 0.0143), fitness=-25881867.074438628
+12903.98 secs, 1485304 evals, 1485362 steps, improv/step: 0.041 (last = 0.0161), fitness=-25881867.074438870
+12933.98 secs, 1488704 evals, 1488762 steps, improv/step: 0.041 (last = 0.0112), fitness=-25881867.074438944
+12963.98 secs, 1491991 evals, 1492052 steps, improv/step: 0.041 (last = 0.0161), fitness=-25881867.074438944
+12993.98 secs, 1495345 evals, 1495407 steps, improv/step: 0.041 (last = 0.0134), fitness=-25881867.074438948
+13023.99 secs, 1498632 evals, 1498694 steps, improv/step: 0.041 (last = 0.0167), fitness=-25881867.074439093
+13053.99 secs, 1501988 evals, 1502050 steps, improv/step: 0.041 (last = 0.0194), fitness=-25881867.074439093
+13083.99 secs, 1505300 evals, 1505362 steps, improv/step: 0.041 (last = 0.0245), fitness=-25881867.074439168
+13114.00 secs, 1508640 evals, 1508703 steps, improv/step: 0.041 (last = 0.0218), fitness=-25881867.074439198
+13144.00 secs, 1512038 evals, 1512101 steps, improv/step: 0.041 (last = 0.0171), fitness=-25881867.074439269
+13174.01 secs, 1515499 evals, 1515563 steps, improv/step: 0.041 (last = 0.0159), fitness=-25881867.074439332
+13204.01 secs, 1518887 evals, 1518951 steps, improv/step: 0.041 (last = 0.0192), fitness=-25881867.074439391
+13234.02 secs, 1522158 evals, 1522222 steps, improv/step: 0.041 (last = 0.0159), fitness=-25881867.074439429
+13264.02 secs, 1525499 evals, 1525563 steps, improv/step: 0.041 (last = 0.0132), fitness=-25881867.074439444
+13294.03 secs, 1528860 evals, 1528925 steps, improv/step: 0.041 (last = 0.0149), fitness=-25881867.074439459
+13324.03 secs, 1532085 evals, 1532150 steps, improv/step: 0.041 (last = 0.0183), fitness=-25881867.074439481
+13354.04 secs, 1535447 evals, 1535512 steps, improv/step: 0.041 (last = 0.0178), fitness=-25881867.074439555
+13384.04 secs, 1538767 evals, 1538832 steps, improv/step: 0.041 (last = 0.0127), fitness=-25881867.074439555
+13414.04 secs, 1542164 evals, 1542229 steps, improv/step: 0.041 (last = 0.0197), fitness=-25881867.074439555
+13444.05 secs, 1545550 evals, 1545616 steps, improv/step: 0.040 (last = 0.0139), fitness=-25881867.074439570
+13474.08 secs, 1549017 evals, 1549084 steps, improv/step: 0.040 (last = 0.0199), fitness=-25881867.074439578
+13504.08 secs, 1552438 evals, 1552505 steps, improv/step: 0.040 (last = 0.0134), fitness=-25881867.074439589
+13534.08 secs, 1555726 evals, 1555793 steps, improv/step: 0.040 (last = 0.0113), fitness=-25881867.074439593
+13564.08 secs, 1559039 evals, 1559106 steps, improv/step: 0.040 (last = 0.0181), fitness=-25881867.074439604
+13594.09 secs, 1562332 evals, 1562399 steps, improv/step: 0.040 (last = 0.0219), fitness=-25881867.074439619
+13624.09 secs, 1565596 evals, 1565665 steps, improv/step: 0.040 (last = 0.0217), fitness=-25881867.074439619
+13654.09 secs, 1568873 evals, 1568942 steps, improv/step: 0.040 (last = 0.0198), fitness=-25881867.074439630
+13684.09 secs, 1572200 evals, 1572269 steps, improv/step: 0.040 (last = 0.0222), fitness=-25881867.074439637
+13714.09 secs, 1575591 evals, 1575661 steps, improv/step: 0.040 (last = 0.0159), fitness=-25881867.074439637
+13744.10 secs, 1578953 evals, 1579023 steps, improv/step: 0.040 (last = 0.0178), fitness=-25881867.074439641
+13774.11 secs, 1582358 evals, 1582428 steps, improv/step: 0.040 (last = 0.0182), fitness=-25881867.074439652
+13804.11 secs, 1585720 evals, 1585790 steps, improv/step: 0.040 (last = 0.0137), fitness=-25881867.074439660
+13834.12 secs, 1589094 evals, 1589164 steps, improv/step: 0.040 (last = 0.0133), fitness=-25881867.074439660
+13864.12 secs, 1592396 evals, 1592466 steps, improv/step: 0.040 (last = 0.0161), fitness=-25881867.074439660
+13894.12 secs, 1595742 evals, 1595812 steps, improv/step: 0.040 (last = 0.0191), fitness=-25881867.074439686
+13924.13 secs, 1599065 evals, 1599135 steps, improv/step: 0.040 (last = 0.0217), fitness=-25881867.074439690
+13954.13 secs, 1602341 evals, 1602412 steps, improv/step: 0.040 (last = 0.0192), fitness=-25881867.074439697
+13984.14 secs, 1605689 evals, 1605760 steps, improv/step: 0.040 (last = 0.0158), fitness=-25881867.074439697
+14014.14 secs, 1609042 evals, 1609114 steps, improv/step: 0.040 (last = 0.0134), fitness=-25881867.074439697
+14044.15 secs, 1612418 evals, 1612492 steps, improv/step: 0.039 (last = 0.0189), fitness=-25881867.074439704
+14074.15 secs, 1615699 evals, 1615773 steps, improv/step: 0.039 (last = 0.0174), fitness=-25881867.074439704
+14104.15 secs, 1619080 evals, 1619154 steps, improv/step: 0.039 (last = 0.0145), fitness=-25881867.074439704
+14134.16 secs, 1622428 evals, 1622503 steps, improv/step: 0.039 (last = 0.0131), fitness=-25881867.074439708
+14164.16 secs, 1625783 evals, 1625861 steps, improv/step: 0.039 (last = 0.0149), fitness=-25881867.074439712
+14194.19 secs, 1629181 evals, 1629261 steps, improv/step: 0.039 (last = 0.0109), fitness=-25881867.074439712
+14224.20 secs, 1632529 evals, 1632609 steps, improv/step: 0.039 (last = 0.0087), fitness=-25881867.074439712
+14254.20 secs, 1635959 evals, 1636039 steps, improv/step: 0.039 (last = 0.0082), fitness=-25881867.074439712
+14284.21 secs, 1639297 evals, 1639377 steps, improv/step: 0.039 (last = 0.0102), fitness=-25881867.074439712
+14314.25 secs, 1642707 evals, 1642787 steps, improv/step: 0.039 (last = 0.0073), fitness=-25881867.074439712
+14344.31 secs, 1646028 evals, 1646108 steps, improv/step: 0.039 (last = 0.0072), fitness=-25881867.074439712
+14374.32 secs, 1649391 evals, 1649473 steps, improv/step: 0.039 (last = 0.0059), fitness=-25881867.074439712
+14404.32 secs, 1652709 evals, 1652792 steps, improv/step: 0.039 (last = 0.0054), fitness=-25881867.074439712
+14434.33 secs, 1656076 evals, 1656160 steps, improv/step: 0.039 (last = 0.0080), fitness=-25881867.074439716
+14464.33 secs, 1659432 evals, 1659516 steps, improv/step: 0.039 (last = 0.0098), fitness=-25881867.074439716
+14494.33 secs, 1662832 evals, 1662917 steps, improv/step: 0.039 (last = 0.0121), fitness=-25881867.074439716
+14524.33 secs, 1666170 evals, 1666255 steps, improv/step: 0.039 (last = 0.0087), fitness=-25881867.074439716
+14554.34 secs, 1669539 evals, 1669624 steps, improv/step: 0.038 (last = 0.0062), fitness=-25881867.074439716
+14584.35 secs, 1672944 evals, 1673030 steps, improv/step: 0.038 (last = 0.0068), fitness=-25881867.074439716
+14614.35 secs, 1676246 evals, 1676332 steps, improv/step: 0.038 (last = 0.0073), fitness=-25881867.074439716
+14644.36 secs, 1679573 evals, 1679659 steps, improv/step: 0.038 (last = 0.0048), fitness=-25881867.074439716
+14674.36 secs, 1682899 evals, 1682985 steps, improv/step: 0.038 (last = 0.0042), fitness=-25881867.074439716
+14704.36 secs, 1686257 evals, 1686343 steps, improv/step: 0.038 (last = 0.0057), fitness=-25881867.074439716
+14734.37 secs, 1689569 evals, 1689655 steps, improv/step: 0.038 (last = 0.0066), fitness=-25881867.074439716
+14764.38 secs, 1692865 evals, 1692951 steps, improv/step: 0.038 (last = 0.0076), fitness=-25881867.074439719
+14794.38 secs, 1696184 evals, 1696271 steps, improv/step: 0.038 (last = 0.0042), fitness=-25881867.074439723
+14824.38 secs, 1699431 evals, 1699518 steps, improv/step: 0.038 (last = 0.0052), fitness=-25881867.074439723
+14854.39 secs, 1702706 evals, 1702793 steps, improv/step: 0.038 (last = 0.0037), fitness=-25881867.074439723
+14884.40 secs, 1705983 evals, 1706070 steps, improv/step: 0.038 (last = 0.0043), fitness=-25881867.074439723
+14914.45 secs, 1709250 evals, 1709337 steps, improv/step: 0.038 (last = 0.0049), fitness=-25881867.074439723
+14944.46 secs, 1712584 evals, 1712672 steps, improv/step: 0.038 (last = 0.0030), fitness=-25881867.074439723
+14974.47 secs, 1716014 evals, 1716102 steps, improv/step: 0.038 (last = 0.0032), fitness=-25881867.074439723
+15004.47 secs, 1719479 evals, 1719567 steps, improv/step: 0.038 (last = 0.0020), fitness=-25881867.074439723
+15034.48 secs, 1722904 evals, 1722993 steps, improv/step: 0.037 (last = 0.0026), fitness=-25881867.074439723
+15064.48 secs, 1726266 evals, 1726355 steps, improv/step: 0.037 (last = 0.0030), fitness=-25881867.074439723
+15094.49 secs, 1729690 evals, 1729779 steps, improv/step: 0.037 (last = 0.0029), fitness=-25881867.074439723
+15124.61 secs, 1733088 evals, 1733177 steps, improv/step: 0.037 (last = 0.0024), fitness=-25881867.074439723
+15154.61 secs, 1736386 evals, 1736475 steps, improv/step: 0.037 (last = 0.0027), fitness=-25881867.074439723
+15184.61 secs, 1739777 evals, 1739867 steps, improv/step: 0.037 (last = 0.0027), fitness=-25881867.074439723
+15214.64 secs, 1743095 evals, 1743187 steps, improv/step: 0.037 (last = 0.0042), fitness=-25881867.074439723
+15244.64 secs, 1746401 evals, 1746494 steps, improv/step: 0.037 (last = 0.0045), fitness=-25881867.074439723
+15274.64 secs, 1749737 evals, 1749830 steps, improv/step: 0.037 (last = 0.0036), fitness=-25881867.074439723
+15304.65 secs, 1753198 evals, 1753292 steps, improv/step: 0.037 (last = 0.0020), fitness=-25881867.074439723
+15334.65 secs, 1756735 evals, 1756829 steps, improv/step: 0.037 (last = 0.0023), fitness=-25881867.074439723
+15364.65 secs, 1760318 evals, 1760412 steps, improv/step: 0.037 (last = 0.0022), fitness=-25881867.074439723
+15394.65 secs, 1763736 evals, 1763831 steps, improv/step: 0.037 (last = 0.0009), fitness=-25881867.074439723
+15424.65 secs, 1767152 evals, 1767247 steps, improv/step: 0.037 (last = 0.0023), fitness=-25881867.074439723
+15454.68 secs, 1770502 evals, 1770597 steps, improv/step: 0.037 (last = 0.0018), fitness=-25881867.074439723
+15484.69 secs, 1773844 evals, 1773939 steps, improv/step: 0.036 (last = 0.0030), fitness=-25881867.074439723
+15514.69 secs, 1777229 evals, 1777324 steps, improv/step: 0.036 (last = 0.0018), fitness=-25881867.074439723
+15544.72 secs, 1780645 evals, 1780740 steps, improv/step: 0.036 (last = 0.0020), fitness=-25881867.074439723
+15574.74 secs, 1784030 evals, 1784126 steps, improv/step: 0.036 (last = 0.0015), fitness=-25881867.074439723
+15604.74 secs, 1787380 evals, 1787476 steps, improv/step: 0.036 (last = 0.0027), fitness=-25881867.074439723
+15634.75 secs, 1790758 evals, 1790854 steps, improv/step: 0.036 (last = 0.0018), fitness=-25881867.074439723
+15664.76 secs, 1794009 evals, 1794105 steps, improv/step: 0.036 (last = 0.0015), fitness=-25881867.074439723
+15694.76 secs, 1797333 evals, 1797429 steps, improv/step: 0.036 (last = 0.0018), fitness=-25881867.074439723
+15724.76 secs, 1800616 evals, 1800712 steps, improv/step: 0.036 (last = 0.0034), fitness=-25881867.074439723
+15754.78 secs, 1803945 evals, 1804042 steps, improv/step: 0.036 (last = 0.0015), fitness=-25881867.074439723
+15784.78 secs, 1807350 evals, 1807447 steps, improv/step: 0.036 (last = 0.0006), fitness=-25881867.074439723
+15814.79 secs, 1810743 evals, 1810840 steps, improv/step: 0.036 (last = 0.0018), fitness=-25881867.074439723
+15844.79 secs, 1814164 evals, 1814263 steps, improv/step: 0.036 (last = 0.0020), fitness=-25881867.074439723
+15874.79 secs, 1817531 evals, 1817632 steps, improv/step: 0.036 (last = 0.0012), fitness=-25881867.074439723
+15904.79 secs, 1820872 evals, 1820973 steps, improv/step: 0.036 (last = 0.0015), fitness=-25881867.074439723
+15934.85 secs, 1824090 evals, 1824191 steps, improv/step: 0.035 (last = 0.0006), fitness=-25881867.074439723
+15964.85 secs, 1827397 evals, 1827499 steps, improv/step: 0.035 (last = 0.0006), fitness=-25881867.074439723
+15994.86 secs, 1830618 evals, 1830720 steps, improv/step: 0.035 (last = 0.0022), fitness=-25881867.074439723
+16024.86 secs, 1833992 evals, 1834094 steps, improv/step: 0.035 (last = 0.0018), fitness=-25881867.074439723
+16054.86 secs, 1837427 evals, 1837529 steps, improv/step: 0.035 (last = 0.0023), fitness=-25881867.074439723
+16084.86 secs, 1840896 evals, 1840998 steps, improv/step: 0.035 (last = 0.0023), fitness=-25881867.074439723
+16114.87 secs, 1844350 evals, 1844453 steps, improv/step: 0.035 (last = 0.0032), fitness=-25881867.074439723
+16144.88 secs, 1847751 evals, 1847854 steps, improv/step: 0.035 (last = 0.0024), fitness=-25881867.074439723
+16174.88 secs, 1851103 evals, 1851207 steps, improv/step: 0.035 (last = 0.0018), fitness=-25881867.074439723
+16204.89 secs, 1854448 evals, 1854552 steps, improv/step: 0.035 (last = 0.0018), fitness=-25881867.074439723
+16234.89 secs, 1857739 evals, 1857843 steps, improv/step: 0.035 (last = 0.0015), fitness=-25881867.074439723
+16264.89 secs, 1861040 evals, 1861144 steps, improv/step: 0.035 (last = 0.0003), fitness=-25881867.074439723
+16294.98 secs, 1864367 evals, 1864471 steps, improv/step: 0.035 (last = 0.0003), fitness=-25881867.074439723
+16324.98 secs, 1867745 evals, 1867850 steps, improv/step: 0.035 (last = 0.0003), fitness=-25881867.074439723
+16354.99 secs, 1871061 evals, 1871166 steps, improv/step: 0.035 (last = 0.0015), fitness=-25881867.074439723
+16384.99 secs, 1874309 evals, 1874414 steps, improv/step: 0.035 (last = 0.0018), fitness=-25881867.074439723
+16414.99 secs, 1877753 evals, 1877858 steps, improv/step: 0.035 (last = 0.0012), fitness=-25881867.074439723
+16445.00 secs, 1881048 evals, 1881157 steps, improv/step: 0.034 (last = 0.0012), fitness=-25881867.074439723
+16475.00 secs, 1884400 evals, 1884510 steps, improv/step: 0.034 (last = 0.0012), fitness=-25881867.074439723
+16505.00 secs, 1887726 evals, 1887838 steps, improv/step: 0.034 (last = 0.0018), fitness=-25881867.074439723
+16535.01 secs, 1891129 evals, 1891241 steps, improv/step: 0.034 (last = 0.0003), fitness=-25881867.074439723
+16565.02 secs, 1894546 evals, 1894659 steps, improv/step: 0.034 (last = 0.0020), fitness=-25881867.074439723
+16595.03 secs, 1897962 evals, 1898076 steps, improv/step: 0.034 (last = 0.0015), fitness=-25881867.074439723
+16625.03 secs, 1901396 evals, 1901510 steps, improv/step: 0.034 (last = 0.0006), fitness=-25881867.074439723
+16655.04 secs, 1904661 evals, 1904777 steps, improv/step: 0.034 (last = 0.0006), fitness=-25881867.074439723
+16685.04 secs, 1907885 evals, 1908002 steps, improv/step: 0.034 (last = 0.0028), fitness=-25881867.074439723
+16715.04 secs, 1911117 evals, 1911234 steps, improv/step: 0.034 (last = 0.0015), fitness=-25881867.074439723
+16745.04 secs, 1914363 evals, 1914480 steps, improv/step: 0.034 (last = 0.0022), fitness=-25881867.074439723
+16775.05 secs, 1917642 evals, 1917760 steps, improv/step: 0.034 (last = 0.0018), fitness=-25881867.074439723
+16805.05 secs, 1921002 evals, 1921121 steps, improv/step: 0.034 (last = 0.0009), fitness=-25881867.074439723
+16835.06 secs, 1924414 evals, 1924535 steps, improv/step: 0.034 (last = 0.0006), fitness=-25881867.074439723
+16865.06 secs, 1927702 evals, 1927824 steps, improv/step: 0.034 (last = 0.0015), fitness=-25881867.074439723
+16895.07 secs, 1931075 evals, 1931197 steps, improv/step: 0.034 (last = 0.0027), fitness=-25881867.074439723
+16925.07 secs, 1934499 evals, 1934623 steps, improv/step: 0.034 (last = 0.0012), fitness=-25881867.074439723
+16955.08 secs, 1937803 evals, 1937927 steps, improv/step: 0.033 (last = 0.0009), fitness=-25881867.074439723
+16985.08 secs, 1941154 evals, 1941280 steps, improv/step: 0.033 (last = 0.0021), fitness=-25881867.074439723
+17015.08 secs, 1944526 evals, 1944656 steps, improv/step: 0.033 (last = 0.0015), fitness=-25881867.074439723
+17045.09 secs, 1947951 evals, 1948085 steps, improv/step: 0.033 (last = 0.0017), fitness=-25881867.074439723
+17075.10 secs, 1951321 evals, 1951455 steps, improv/step: 0.033 (last = 0.0027), fitness=-25881867.074439723
+17105.10 secs, 1954738 evals, 1954872 steps, improv/step: 0.033 (last = 0.0023), fitness=-25881867.074439723
+17135.11 secs, 1958110 evals, 1958244 steps, improv/step: 0.033 (last = 0.0015), fitness=-25881867.074439723
+17165.11 secs, 1961363 evals, 1961498 steps, improv/step: 0.033 (last = 0.0006), fitness=-25881867.074439723
+17195.12 secs, 1964657 evals, 1964793 steps, improv/step: 0.033 (last = 0.0015), fitness=-25881867.074439723
+17225.12 secs, 1967908 evals, 1968046 steps, improv/step: 0.033 (last = 0.0003), fitness=-25881867.074439723
+17255.13 secs, 1971135 evals, 1971273 steps, improv/step: 0.033 (last = 0.0009), fitness=-25881867.074439723
+17285.13 secs, 1974434 evals, 1974573 steps, improv/step: 0.033 (last = 0.0012), fitness=-25881867.074439723
+17315.13 secs, 1977727 evals, 1977867 steps, improv/step: 0.033 (last = 0.0009), fitness=-25881867.074439723
+17345.13 secs, 1981022 evals, 1981162 steps, improv/step: 0.033 (last = 0.0009), fitness=-25881867.074439723
+17375.14 secs, 1984372 evals, 1984512 steps, improv/step: 0.033 (last = 0.0012), fitness=-25881867.074439723
+17405.14 secs, 1987718 evals, 1987858 steps, improv/step: 0.033 (last = 0.0006), fitness=-25881867.074439723
+17435.15 secs, 1990977 evals, 1991117 steps, improv/step: 0.033 (last = 0.0015), fitness=-25881867.074439723
+17465.15 secs, 1994163 evals, 1994303 steps, improv/step: 0.033 (last = 0.0013), fitness=-25881867.074439723
+17495.15 secs, 1997373 evals, 1997514 steps, improv/step: 0.033 (last = 0.0016), fitness=-25881867.074439723
+17525.15 secs, 2000630 evals, 2000771 steps, improv/step: 0.032 (last = 0.0009), fitness=-25881867.074439723
+17555.18 secs, 2003843 evals, 2003984 steps, improv/step: 0.032 (last = 0.0009), fitness=-25881867.074439723
+17585.18 secs, 2007103 evals, 2007244 steps, improv/step: 0.032 (last = 0.0015), fitness=-25881867.074439723
+17615.27 secs, 2010381 evals, 2010523 steps, improv/step: 0.032 (last = 0.0034), fitness=-25881867.074439723
+17645.28 secs, 2013651 evals, 2013793 steps, improv/step: 0.032 (last = 0.0021), fitness=-25881867.074439723
+17675.28 secs, 2016970 evals, 2017113 steps, improv/step: 0.032 (last = 0.0018), fitness=-25881867.074439730
+17705.28 secs, 2020305 evals, 2020448 steps, improv/step: 0.032 (last = 0.0018), fitness=-25881867.074439730
+17735.33 secs, 2023739 evals, 2023882 steps, improv/step: 0.032 (last = 0.0032), fitness=-25881867.074439730
+17765.42 secs, 2027149 evals, 2027293 steps, improv/step: 0.032 (last = 0.0006), fitness=-25881867.074439730
+17795.42 secs, 2030608 evals, 2030753 steps, improv/step: 0.032 (last = 0.0009), fitness=-25881867.074439730
+17825.42 secs, 2033954 evals, 2034100 steps, improv/step: 0.032 (last = 0.0012), fitness=-25881867.074439730
+17855.50 secs, 2037298 evals, 2037444 steps, improv/step: 0.032 (last = 0.0018), fitness=-25881867.074439730
+17885.50 secs, 2040576 evals, 2040725 steps, improv/step: 0.032 (last = 0.0009), fitness=-25881867.074439730
+17915.51 secs, 2043876 evals, 2044025 steps, improv/step: 0.032 (last = 0.0015), fitness=-25881867.074439730
+17945.52 secs, 2047159 evals, 2047309 steps, improv/step: 0.032 (last = 0.0015), fitness=-25881867.074439730
+17975.52 secs, 2050396 evals, 2050546 steps, improv/step: 0.032 (last = 0.0022), fitness=-25881867.074439730
+18005.53 secs, 2053718 evals, 2053870 steps, improv/step: 0.032 (last = 0.0003), fitness=-25881867.074439730
+18035.53 secs, 2056972 evals, 2057124 steps, improv/step: 0.032 (last = 0.0015), fitness=-25881867.074439730
+18065.58 secs, 2060180 evals, 2060332 steps, improv/step: 0.032 (last = 0.0016), fitness=-25881867.074439730
+18095.58 secs, 2063402 evals, 2063555 steps, improv/step: 0.032 (last = 0.0025), fitness=-25881867.074439730
+18125.59 secs, 2066649 evals, 2066802 steps, improv/step: 0.031 (last = 0.0031), fitness=-25881867.074439730
+18155.59 secs, 2069921 evals, 2070074 steps, improv/step: 0.031 (last = 0.0015), fitness=-25881867.074439730
+18185.60 secs, 2073271 evals, 2073425 steps, improv/step: 0.031 (last = 0.0012), fitness=-25881867.074439730
+18215.60 secs, 2076520 evals, 2076674 steps, improv/step: 0.031 (last = 0.0015), fitness=-25881867.074439730
+18245.60 secs, 2079730 evals, 2079884 steps, improv/step: 0.031 (last = 0.0025), fitness=-25881867.074439730
+18275.60 secs, 2083014 evals, 2083169 steps, improv/step: 0.031 (last = 0.0021), fitness=-25881867.074439730
+18305.61 secs, 2086150 evals, 2086305 steps, improv/step: 0.031 (last = 0.0016), fitness=-25881867.074439730
+18335.61 secs, 2089466 evals, 2089622 steps, improv/step: 0.031 (last = 0.0018), fitness=-25881867.074439730
+18365.61 secs, 2092773 evals, 2092930 steps, improv/step: 0.031 (last = 0.0027), fitness=-25881867.074439730
+18395.61 secs, 2096073 evals, 2096230 steps, improv/step: 0.031 (last = 0.0015), fitness=-25881867.074439730
+18425.62 secs, 2099381 evals, 2099538 steps, improv/step: 0.031 (last = 0.0021), fitness=-25881867.074439730
+18455.62 secs, 2102692 evals, 2102849 steps, improv/step: 0.031 (last = 0.0021), fitness=-25881867.074439730
+18485.62 secs, 2106052 evals, 2106209 steps, improv/step: 0.031 (last = 0.0018), fitness=-25881867.074439730
+18515.63 secs, 2109439 evals, 2109598 steps, improv/step: 0.031 (last = 0.0041), fitness=-25881867.074439730
+18545.64 secs, 2112910 evals, 2113069 steps, improv/step: 0.031 (last = 0.0014), fitness=-25881867.074439730
+18575.64 secs, 2116174 evals, 2116336 steps, improv/step: 0.031 (last = 0.0028), fitness=-25881867.074439730
+18605.64 secs, 2119613 evals, 2119775 steps, improv/step: 0.031 (last = 0.0020), fitness=-25881867.074439730
+18635.64 secs, 2122983 evals, 2123146 steps, improv/step: 0.031 (last = 0.0030), fitness=-25881867.074439730
+18665.65 secs, 2126419 evals, 2126582 steps, improv/step: 0.031 (last = 0.0009), fitness=-25881867.074439730
+18695.65 secs, 2129809 evals, 2129972 steps, improv/step: 0.031 (last = 0.0029), fitness=-25881867.074439730
+18725.66 secs, 2133225 evals, 2133388 steps, improv/step: 0.031 (last = 0.0020), fitness=-25881867.074439730
+18755.67 secs, 2136475 evals, 2136640 steps, improv/step: 0.031 (last = 0.0015), fitness=-25881867.074439730
+18785.68 secs, 2139785 evals, 2139951 steps, improv/step: 0.030 (last = 0.0027), fitness=-25881867.074439730
+18815.68 secs, 2143117 evals, 2143283 steps, improv/step: 0.030 (last = 0.0018), fitness=-25881867.074439730
+18845.69 secs, 2146371 evals, 2146537 steps, improv/step: 0.030 (last = 0.0018), fitness=-25881867.074439730
+18875.69 secs, 2149625 evals, 2149795 steps, improv/step: 0.030 (last = 0.0015), fitness=-25881867.074439730
+18905.69 secs, 2153097 evals, 2153268 steps, improv/step: 0.030 (last = 0.0023), fitness=-25881867.074439730
+18935.69 secs, 2156481 evals, 2156655 steps, improv/step: 0.030 (last = 0.0015), fitness=-25881867.074439730
+18965.69 secs, 2159840 evals, 2160014 steps, improv/step: 0.030 (last = 0.0015), fitness=-25881867.074439730
+18995.73 secs, 2163177 evals, 2163353 steps, improv/step: 0.030 (last = 0.0030), fitness=-25881867.074439730
+19025.73 secs, 2166434 evals, 2166611 steps, improv/step: 0.030 (last = 0.0021), fitness=-25881867.074439730
+19055.74 secs, 2169621 evals, 2169798 steps, improv/step: 0.030 (last = 0.0016), fitness=-25881867.074439730
+19085.76 secs, 2172884 evals, 2173061 steps, improv/step: 0.030 (last = 0.0018), fitness=-25881867.074439730
+19115.76 secs, 2176224 evals, 2176401 steps, improv/step: 0.030 (last = 0.0003), fitness=-25881867.074439730
+19145.77 secs, 2179519 evals, 2179696 steps, improv/step: 0.030 (last = 0.0015), fitness=-25881867.074439730
+19175.77 secs, 2182903 evals, 2183081 steps, improv/step: 0.030 (last = 0.0012), fitness=-25881867.074439730
+19205.78 secs, 2186173 evals, 2186352 steps, improv/step: 0.030 (last = 0.0006), fitness=-25881867.074439730
+19235.78 secs, 2189564 evals, 2189744 steps, improv/step: 0.030 (last = 0.0021), fitness=-25881867.074439730
+19265.79 secs, 2192971 evals, 2193154 steps, improv/step: 0.030 (last = 0.0018), fitness=-25881867.074439730
+19295.79 secs, 2196336 evals, 2196519 steps, improv/step: 0.030 (last = 0.0009), fitness=-25881867.074439730
+19325.80 secs, 2199680 evals, 2199865 steps, improv/step: 0.030 (last = 0.0018), fitness=-25881867.074439730
+19355.80 secs, 2203181 evals, 2203367 steps, improv/step: 0.030 (last = 0.0017), fitness=-25881867.074439730
+19385.80 secs, 2206866 evals, 2207055 steps, improv/step: 0.030 (last = 0.0014), fitness=-25881867.074439730
+19415.81 secs, 2210593 evals, 2210782 steps, improv/step: 0.030 (last = 0.0008), fitness=-25881867.074439730
+19445.81 secs, 2214265 evals, 2214454 steps, improv/step: 0.030 (last = 0.0011), fitness=-25881867.074439730
+19475.82 secs, 2217910 evals, 2218099 steps, improv/step: 0.029 (last = 0.0005), fitness=-25881867.074439730
+19505.83 secs, 2221429 evals, 2221619 steps, improv/step: 0.029 (last = 0.0006), fitness=-25881867.074439730
+19535.83 secs, 2225098 evals, 2225290 steps, improv/step: 0.029 (last = 0.0003), fitness=-25881867.074439730
+19565.83 secs, 2228706 evals, 2228898 steps, improv/step: 0.029 (last = 0.0006), fitness=-25881867.074439730
+19595.84 secs, 2232283 evals, 2232477 steps, improv/step: 0.029 (last = 0.0011), fitness=-25881867.074439730
+19625.84 secs, 2235805 evals, 2235999 steps, improv/step: 0.029 (last = 0.0009), fitness=-25881867.074439730
+19655.85 secs, 2239313 evals, 2239507 steps, improv/step: 0.029 (last = 0.0006), fitness=-25881867.074439730
+19685.85 secs, 2242945 evals, 2243139 steps, improv/step: 0.029 (last = 0.0017), fitness=-25881867.074439730
+19715.88 secs, 2246746 evals, 2246940 steps, improv/step: 0.029 (last = 0.0000), fitness=-25881867.074439730
+19745.99 secs, 2250527 evals, 2250721 steps, improv/step: 0.029 (last = 0.0003), fitness=-25881867.074439730
+19775.99 secs, 2254129 evals, 2254323 steps, improv/step: 0.029 (last = 0.0006), fitness=-25881867.074439730
+19806.00 secs, 2257810 evals, 2258004 steps, improv/step: 0.029 (last = 0.0014), fitness=-25881867.074439730
+19836.01 secs, 2261335 evals, 2261529 steps, improv/step: 0.029 (last = 0.0000), fitness=-25881867.074439730
+19866.01 secs, 2265131 evals, 2265326 steps, improv/step: 0.029 (last = 0.0011), fitness=-25881867.074439730
+19896.01 secs, 2269099 evals, 2269295 steps, improv/step: 0.029 (last = 0.0005), fitness=-25881867.074439730
+19926.01 secs, 2272975 evals, 2273171 steps, improv/step: 0.029 (last = 0.0010), fitness=-25881867.074439730
+19956.03 secs, 2276840 evals, 2277036 steps, improv/step: 0.029 (last = 0.0005), fitness=-25881867.074439730
+19986.04 secs, 2280803 evals, 2280999 steps, improv/step: 0.029 (last = 0.0005), fitness=-25881867.074439730
+20016.04 secs, 2284724 evals, 2284920 steps, improv/step: 0.029 (last = 0.0015), fitness=-25881867.074439730
+20046.04 secs, 2288518 evals, 2288715 steps, improv/step: 0.029 (last = 0.0008), fitness=-25881867.074439730
+20076.05 secs, 2292262 evals, 2292459 steps, improv/step: 0.029 (last = 0.0008), fitness=-25881867.074439730
+20106.05 secs, 2295985 evals, 2296182 steps, improv/step: 0.028 (last = 0.0011), fitness=-25881867.074439730
+20136.05 secs, 2299643 evals, 2299840 steps, improv/step: 0.028 (last = 0.0008), fitness=-25881867.074439730
+20166.13 secs, 2303340 evals, 2303538 steps, improv/step: 0.028 (last = 0.0003), fitness=-25881867.074439730
+20196.19 secs, 2306964 evals, 2307162 steps, improv/step: 0.028 (last = 0.0000), fitness=-25881867.074439730
+20226.19 secs, 2310579 evals, 2310779 steps, improv/step: 0.028 (last = 0.0006), fitness=-25881867.074439730
+20256.20 secs, 2314340 evals, 2314540 steps, improv/step: 0.028 (last = 0.0005), fitness=-25881867.074439730
+20286.20 secs, 2318338 evals, 2318540 steps, improv/step: 0.028 (last = 0.0003), fitness=-25881867.074439730
+20316.20 secs, 2322311 evals, 2322516 steps, improv/step: 0.028 (last = 0.0003), fitness=-25881867.074439730
+20346.20 secs, 2326301 evals, 2326506 steps, improv/step: 0.028 (last = 0.0000), fitness=-25881867.074439730
+20376.21 secs, 2330339 evals, 2330545 steps, improv/step: 0.028 (last = 0.0002), fitness=-25881867.074439730
+20406.21 secs, 2334470 evals, 2334676 steps, improv/step: 0.028 (last = 0.0015), fitness=-25881867.074439730
+20436.21 secs, 2338435 evals, 2338642 steps, improv/step: 0.028 (last = 0.0010), fitness=-25881867.074439730
+20466.22 secs, 2342387 evals, 2342602 steps, improv/step: 0.028 (last = 0.0013), fitness=-25881867.074439730
+20496.22 secs, 2346279 evals, 2346502 steps, improv/step: 0.028 (last = 0.0003), fitness=-25881867.074439730
+20526.22 secs, 2350166 evals, 2350396 steps, improv/step: 0.028 (last = 0.0008), fitness=-25881867.074439730
+20556.23 secs, 2354199 evals, 2354432 steps, improv/step: 0.028 (last = 0.0005), fitness=-25881867.074439730
+20586.23 secs, 2358140 evals, 2358375 steps, improv/step: 0.028 (last = 0.0013), fitness=-25881867.074439730
+20616.23 secs, 2362057 evals, 2362293 steps, improv/step: 0.028 (last = 0.0005), fitness=-25881867.074439730
+20646.24 secs, 2365963 evals, 2366199 steps, improv/step: 0.028 (last = 0.0000), fitness=-25881867.074439730
+20676.24 secs, 2369887 evals, 2370124 steps, improv/step: 0.028 (last = 0.0013), fitness=-25881867.074439730
+20706.25 secs, 2373843 evals, 2374081 steps, improv/step: 0.028 (last = 0.0005), fitness=-25881867.074439730
+20736.25 secs, 2377696 evals, 2377936 steps, improv/step: 0.028 (last = 0.0005), fitness=-25881867.074439730
+20766.26 secs, 2381673 evals, 2381913 steps, improv/step: 0.027 (last = 0.0005), fitness=-25881867.074439730
+20796.26 secs, 2385638 evals, 2385879 steps, improv/step: 0.027 (last = 0.0003), fitness=-25881867.074439730
+20826.27 secs, 2389424 evals, 2389665 steps, improv/step: 0.027 (last = 0.0011), fitness=-25881867.074439730
+20856.27 secs, 2393281 evals, 2393523 steps, improv/step: 0.027 (last = 0.0000), fitness=-25881867.074439730
+20886.33 secs, 2397287 evals, 2397530 steps, improv/step: 0.027 (last = 0.0010), fitness=-25881867.074439730
+20916.34 secs, 2401296 evals, 2401539 steps, improv/step: 0.027 (last = 0.0002), fitness=-25881867.074439730
+20946.35 secs, 2405396 evals, 2405640 steps, improv/step: 0.027 (last = 0.0007), fitness=-25881867.074439730
+20976.35 secs, 2409372 evals, 2409616 steps, improv/step: 0.027 (last = 0.0010), fitness=-25881867.074439730
+21006.35 secs, 2413415 evals, 2413659 steps, improv/step: 0.027 (last = 0.0015), fitness=-25881867.074439730
+21036.35 secs, 2417395 evals, 2417640 steps, improv/step: 0.027 (last = 0.0010), fitness=-25881867.074439730
+21066.35 secs, 2421445 evals, 2421691 steps, improv/step: 0.027 (last = 0.0015), fitness=-25881867.074439730
+21096.36 secs, 2425418 evals, 2425666 steps, improv/step: 0.027 (last = 0.0010), fitness=-25881867.074439730
+21126.36 secs, 2429521 evals, 2429769 steps, improv/step: 0.027 (last = 0.0007), fitness=-25881867.074439730
+21156.38 secs, 2433578 evals, 2433826 steps, improv/step: 0.027 (last = 0.0007), fitness=-25881867.074439730
+21186.38 secs, 2437508 evals, 2437758 steps, improv/step: 0.027 (last = 0.0018), fitness=-25881867.074439734
+21216.39 secs, 2441404 evals, 2441655 steps, improv/step: 0.027 (last = 0.0010), fitness=-25881867.074439734
+21246.39 secs, 2445361 evals, 2445613 steps, improv/step: 0.027 (last = 0.0013), fitness=-25881867.074439734
+21276.40 secs, 2449384 evals, 2449640 steps, improv/step: 0.027 (last = 0.0012), fitness=-25881867.074439734
+21306.40 secs, 2453358 evals, 2453615 steps, improv/step: 0.027 (last = 0.0018), fitness=-25881867.074439734
+21336.40 secs, 2457300 evals, 2457559 steps, improv/step: 0.027 (last = 0.0008), fitness=-25881867.074439734
+21366.40 secs, 2461459 evals, 2461722 steps, improv/step: 0.027 (last = 0.0014), fitness=-25881867.074439734
+21396.41 secs, 2465617 evals, 2465881 steps, improv/step: 0.027 (last = 0.0010), fitness=-25881867.074439734
+21426.41 secs, 2469725 evals, 2469990 steps, improv/step: 0.027 (last = 0.0015), fitness=-25881867.074439734
+21456.41 secs, 2473710 evals, 2473975 steps, improv/step: 0.027 (last = 0.0005), fitness=-25881867.074439734
+21486.44 secs, 2477617 evals, 2477882 steps, improv/step: 0.026 (last = 0.0005), fitness=-25881867.074439734
+21516.46 secs, 2481598 evals, 2481863 steps, improv/step: 0.026 (last = 0.0008), fitness=-25881867.074439734
+21546.46 secs, 2485733 evals, 2486000 steps, improv/step: 0.026 (last = 0.0015), fitness=-25881867.074439734
+21576.47 secs, 2489625 evals, 2489893 steps, improv/step: 0.026 (last = 0.0003), fitness=-25881867.074439734
+21606.47 secs, 2493612 evals, 2493880 steps, improv/step: 0.026 (last = 0.0008), fitness=-25881867.074439734
+21636.48 secs, 2497563 evals, 2497832 steps, improv/step: 0.026 (last = 0.0005), fitness=-25881867.074439734
+
+Optimization stopped after 2500271 steps and 21654.81 seconds
+Termination reason: Max number of function evaluations (2500000) reached
+Steps per second = 115.46
+Function evals per second = 115.45
+Improvements/step = Inf
+Total function evaluations = 2500001
+
+
+Best candidate found: [24.9368, 10.0121, 2.00858, 2.99808, 29.293, 50.197, 20.0599, 206.381, 1.1007, 100.081, 5.16256e-6, 8.23788e-5, 0.00298627, 0.0498104, 0.39962, 1.99871]
+
+Fitness: -25881867.074439734
+
+-2.5881867074439734e7
+
+[24.936798840709848, 10.012062865788735, 2.008583495927614, 2.9980838791872726, 29.293023087822935, 50.19700724944932, 20.059949131387295, 206.38146039566078, 1.1007034708905816, 100.08093803216659, 5.162557663954799e-6, 8.237884933099651e-5, 0.002986272235957921, 0.0498104198294392, 0.3996195673798097, 1.99870558848392]
+
+Script has finished
+Wed Dec 22 02:12:06 CET 2021
+
+------------------------------------------------------------
+Sender: LSF System <schwan@makalu192>
+Subject: Job 576385: <Julia_Job_parallel> in cluster <wuerfel> Done
+
+Job <Julia_Job_parallel> was submitted from host <makalu56> by user <magr4985> in cluster <wuerfel> at Tue Dec 21 19:54:25 2021
+Job was executed on host(s) <makalu192>, in queue <BatchXL>, as user <magr4985> in cluster <wuerfel> at Tue Dec 21 20:07:18 2021
+</usr/scratch4/magr4985> was used as the home directory.
+</usr/scratch4/magr4985/TRPL/BatchJobs/syn_data_3/Run22> was used as the working directory.
+Started at Tue Dec 21 20:07:18 2021
+Terminated at Wed Dec 22 02:12:06 2021
+Results reported at Wed Dec 22 02:12:06 2021
+
+Your job looked like:
+
+------------------------------------------------------------
+# LSBATCH: User input
+#!/bin/csh 
+#BSUB -q BatchXL 
+#BSUB -R "mem > 8000 span[hosts=1] && intel_avx2" 
+#BSUB -oo lsf_julia_%J.log 
+#BSUB -eo lsf_julia_%J.err 
+#BSUB -J Julia_Job_parallel 
+#BSUB -L /bin/csh 
+#BSUB -n 1 
+date 
+pwd 
+module purge 
+/usr/scratch4/magr4985/julia-1.6.2/bin/julia -t 4 /usr/scratch4/magr4985/TRPL/Programs/trpl_analysis_syn.jl 3 2500000 1 /usr/scratch4/magr4985/TRPL/BatchJobs/syn_data_3/Run22 1.0e-14 3600 "[1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0e-6, 1.0e-6, 1.0e-6, 1.0e-6, 1.0e-6, 1.0e-6, 1.0e-6, 1.0e-6, 1.0e-6, 1.0e-6]" "[5000.0, 5000.0, 1000.0, 1000.0, 1.0e9, 1000.0, 10000.0, 10000.0, 1000.0, 1.0e6, 5.0, 5.0, 5.0, 5.0, 5.0, 5.0, 5.0, 5.0, 5.0, 5.0]" 
+date
+------------------------------------------------------------
+
+Successfully completed.
+
+Resource usage summary:
+
+    CPU time :                                   40547.26 sec.
+    Max Memory :                                 1148.31 MB
+    Average Memory :                             995.21 MB
+    Total Requested Memory :                     -
+    Delta Memory :                               -
+    Max Swap :                                   128 KB
+    Max Processes :                              4
+    Max Threads :                                12
+    Run time :                                   21888 sec.
+    Turnaround time :                            22661 sec.
+
+The output (if any) is above this job summary.
+
+
+
+PS:
+
+Read file <lsf_julia_576385.err> for stderr output of this job.
+
