@@ -9,7 +9,7 @@ using OrdinaryDiffEq, DiffEqSensitivity, ForwardDiff, LinearAlgebra,
       Random, Printf, Distributions, BlackBoxOptim, NLopt, DataFrames, CSV
 ## input parameters
 # Parameters here are setup for a quick test! For a real optimization set n_iter >= 2500000, max_time_loc_opt = 3600 to be save!
-job_dir = string(path_to_trpl,"\\Optimizations\\Test\\Job1") # job directory (just for tests)
+job_dir = string(path_to_trpl,"\\Optimizations\\Test\\Job2") # job directory (just for tests)
 name_measurement = "C2702_hzb" # name of measurement
 n_iter = 2500 # number of optimization iteration and runs
 n_runs =  1 # number of optimization runs
