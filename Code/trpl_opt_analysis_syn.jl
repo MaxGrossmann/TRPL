@@ -1,3 +1,5 @@
+## path to TRPL folder --> set it before running the code!
+path_to_trpl = "C:\\TRPL" # some path to the TRPL folder
 ## activate package environment
 cd(@__DIR__)
 using Pkg
@@ -6,10 +8,11 @@ Pkg.activate("Project.toml")
 using OrdinaryDiffEq, LinearAlgebra, BlackBoxOptim, ForwardDiff, DelimitedFiles,
 	  Printf, Distributions, DataFrames, PGFPlots, CSV, XLSX, ColorSchemes, NLopt
 ## directory
-cd(string(homedir(),"\\OneDrive\\Uni_Master\\TRPL\\Data\\Syn\\data"))
-## plot for publication and save data? (true or false)
-plt_pub = true
-noise = true # only important if plt_pub = true
+cd(string(path_to_trpl,"\\Data\\Syn\\CSV"))
+## output results? (true or false)
+out = false
+## Poisson noise? (true or false)
+noise = true 
 ## parameters measurement data
 idx_syn_data = 5
 ## load measurement data
@@ -54,8 +57,8 @@ function generateipl(par)
     end
     ensemble_simu = EnsembleProblem(prob, prob_func = prob_func)
     sol = Array(solve(ensemble_simu, Rosenbrock23(), p = par[1:num_pars-1], EnsembleThreads(),
-		      trajectories = num_traj, saveat = t, save_idxs = [1],
-		      reltol = 1e-6, abstol = 1e-8))[1,:,:]
+		      		  trajectories = num_traj, saveat = t, save_idxs = [1],
+		     		  reltol = 1e-6, abstol = 1e-8))[1,:,:]
     ipl = zeros(size(sol))
     for i = 1:num_traj
     	ipl[:,i] = ((C_scaling * par[num_pars] / ND[i]) .* sol[:,i] .* (sol[:,i] .+ 1)) .+ background[i]
@@ -87,7 +90,7 @@ function loss_nlopt(par::Vector,grad::Vector)
     return loss(par)
 end
 ## load optimization data
-cd(string(homedir(),"\\OneDrive\\Uni_Master\\TRPL\\Data\\Opt\\","syn_data_",idx_syn_data))
+cd(string(path_to_trpl,"\\Optimizations\\Syn\\","syn_data_",idx_syn_data))
 opt_outputs = Vector{String}()
 for (root, dirs, files) in walkdir(pwd())
     for file in files
@@ -119,7 +122,7 @@ p_fit = Float64.(sorted_opt_results[1,2:end])
 println("sanity check for loss: loss(p_fit) - loss(p_csv) = $(loss(p_fit) .- sorted_opt_results[1,1])")
 IPL_opt = generateipl(p_fit)
 ## get input parameters
-cd(string(homedir(),"\\OneDrive\\Uni_Master\\TRPL\\Data\\Syn\\params"))
+cd(string(path_to_trpl,"\\Data\\Syn\\Params"))
 input_params = readdlm("syn_data_$idx_syn_data.txt",'\n')
 p_true = let expr = Meta.parse(input_params[3])
 @assert expr.head == :vect
@@ -138,8 +141,8 @@ function loss_rescaled(par)
     end
     ensemble_simu = EnsembleProblem(prob, prob_func = prob_func)
     sol = Array(solve(ensemble_simu, Rosenbrock23(), p = _par[1:num_pars-1], EnsembleThreads(),
-		      trajectories = num_traj, saveat = t,save_idxs = [1],
-		      reltol=1e-6,abstol=1e-8))[1,:,:]
+		      		  trajectories = num_traj, saveat = t,save_idxs = [1],
+		      		  reltol=1e-6,abstol=1e-8))[1,:,:]
     for i = 1:num_traj
 		model = ((C_scaling * _par[num_pars] / ND[i]) .* sol[:,i] .* (sol[:,i] .+ 1)) .+ background[i]
 		idx_used = idx_IPL[:,i] .& (model .> 0)
@@ -233,10 +236,10 @@ rename!(df_opt,vcat(var_names,"Seed"))
 df_data = DataFrame(data_table,:auto)
 rename!(df_data,vcat("/",["Transient $i" for i = 1:num_traj]))
 ## publication outputs
-if plt_pub 
+if out 
 	## output file path
 	file_name = ("syn_data_$idx_syn_data.xlsx")
-	xlsx_path = string(homedir(),"\\OneDrive\\Uni_Master\\TRPL\\Data\\Final\\Supplement\\data\\",file_name)
+	xlsx_path = string(path_to_trpl,"\\Results\\Syn",file_name)
 	## save output
 	if isfile(xlsx_path)
 		rm(xlsx_path)
@@ -244,43 +247,4 @@ if plt_pub
 	XLSX.writetable(xlsx_path, Results = (collect(DataFrames.eachcol(df_res)), DataFrames.names(df_res)),
 					Opts = (collect(DataFrames.eachcol(df_opt)), DataFrames.names(df_opt)),
 					Data = (collect(DataFrames.eachcol(df_data)), DataFrames.names(df_data)))
-	## plot preparations
-	noise_distance = 15
-	sf_plt = zeros(num_traj)
-	sf_plt[1] = 1
-	for i = 2:num_traj
-		sf_plt[i] = sf_plt[i-1] * noise_distance * background[i-1] / background[i]
-	end
-	sf_plt =  round.(sf_plt,sigdigits=2)
-	IPL_plt = zeros(size(IPL))
-	idx_plt = zeros(Bool,size(IPL))
-	for i = 1:num_traj
-		IPL_plt[:,i] = (IPL[:,i] .+ 1e-3) .* sf_plt[i]
-		idx_plt[:,i] = IPL_plt[:,i] .> 0
-	end
-	ylim = (10^-0.5,10^(ceil(log10(maximum(IPL_plt)))))
-	## PGFPlots for Tikz
-	colormap = [(x.r, x.g, x.b) for x in ColorSchemes.seaborn_colorblind.colors]
-	for i = 1:length(colormap)
-		define_color("myrgbcolors$i", [colormap[i][1],colormap[i][2],colormap[i][3]])
-	end
-	plot_publication = PGFPlots.Axis(style="width=8.5cm, height=8.5cm, grid=major", ymode="log",
-									 xlabel="t (ns)", ylabel="Counts", xmin=0, xmax=t[end],
-									 ymin=ylim[1], ymax=ylim[2])
-	for i = num_traj:-1:1
-		if noise
-			push!(plot_publication, Plots.Linear(t[idx_plt[:,i]],IPL_plt[idx_plt[:,i],i],
-												 style="myrgbcolors$i, smooth, solid",mark="none",
-												 legendentry=L"$\eta^0_{%$i}$"))
-		elseif !noise 
-			push!(plot_publication, Plots.Linear(t,IPL_plt[:,i],style="myrgbcolors$i, thick, smooth, solid",
-												 mark="none", legendentry=L"$\eta^0_{%$i}$"))
-		end
-	end
-	for i = num_traj:-1:1
-		push!(plot_publication, Plots.Linear(t,(IPL_opt[:,i] .+ 1e-3).* sf_plt[i],
-			                                 style="black, smooth, solid",mark="none"))
-	end
-	file_name_tex= string(homedir(),"\\OneDrive\\Uni_Master\\TRPL\\Data\\Final\\Supplement\\Tikz\\syn_data_$(idx_syn_data)_fit.tex")
-	save(file_name_tex,plot_publication)
 end

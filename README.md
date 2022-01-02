@@ -36,3 +36,5 @@ a .csv containing the optimization fitness, optimizied parameters, parameter bou
 ## Results
 
 Contains final results, all optimization runs and the data used as.xlsx files for real and synthetic optimizations. 
+
+(PRNG = Mersenne Twister: for optimizations and Poisson Noise for synthetic data sets)

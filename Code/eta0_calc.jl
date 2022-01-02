@@ -2,10 +2,10 @@
 cd(@__DIR__)
 using Pkg
 Pkg.activate("Project.toml")
-## constants
+## physical constants
 h = 6.62607015*1e-34
 c = 299792458
-## parameters
+## experimental parameters
 rep_rate = 200e3
 P = [6.89e-8, 6.21e-4]
 lambda = 520*1e-9
@@ -13,7 +13,7 @@ fwhm = 205*1e-6
 d = 2000*1e-9
 T = 0.4292
 N_DA = 5e16
-## calcuations
+## main calculations
 E = P./rep_rate
 N = T*E/(h*c)*lambda
 V = pi*fwhm^2*d/4

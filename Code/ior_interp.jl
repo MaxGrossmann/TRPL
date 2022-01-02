@@ -2,17 +2,15 @@
 cd(@__DIR__)
 using Pkg
 Pkg.activate("Project.toml")
-## percentage x of Al, wavelengths λ and index of refraction n from publication
-x = [0.491 0.590; 0.7 0.804]
-lambda = [0.405 0.520]
-n = [4.5889 + 0.83390im 3.8264 + 0.19880im;
-     4.4384 + 0.68930im 3.7477 + 0.15232im;
-     4.2759 + 0.53061im 3.6807 + 0.05888im;
-     4.1150 + 0.40503im 3.5071 + 0.00385im]
+## percentage x of Al, wavelengths λ and index of refraction n from publication Aspn 1986
+x = [0.491 0.590]
+lambda = [0.520]
+n = [3.8264 + 0.19880im;
+     3.7477 + 0.15232im]
 N = real(n)
 k = imag(n)
 ## interpolation of n for wanted x
-x_wanted = [0.509 0.720]
+x_wanted = [0.509]
 l = length(lambda)
 m = length(x_wanted)
 N_wanted = zeros(m,l)

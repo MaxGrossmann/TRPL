@@ -1,3 +1,5 @@
+## path to TRPL folder --> set it before running the code!
+path_to_trpl = "C:\\TRPL" # some path to the TRPL folder
 ## activate package environment
 cd(@__DIR__)
 using Pkg
@@ -5,7 +7,7 @@ Pkg.activate("Project.toml")
 ## loading packages
 using OrdinaryDiffEq, LinearAlgebra, StaticArrays, Random, NLopt, DelimitedFiles,
 	  BlackBoxOptim, Printf, PoissonRandom, DataFrames, Plots, CSV
-## backend for publication-quality figures
+## backend quick plots
 pyplot()
 default(size = (800, 600))
 ## save?
@@ -110,10 +112,8 @@ for i = num_traj:-1:1
 end
 display(plot_window)
 if save_output
-	## save plot
-	savefig(string(homedir(),"\\OneDrive\\Uni_Master\\TRPL\\Data\\Syn\\Plots\\$name_syn_data.pdf"))
 	## save input parameters
-	io = open(string(homedir(),"\\OneDrive\\Uni_Master\\TRPL\\Data\\Syn\\Params\\$name_syn_data.txt"), "w")
+	io = open(string(path_to_trpl,"\\Data\\Syn\\Params\\$name_syn_data.txt"), "w")
 		println(io, "parameters")
 		println(io, "τ_r0,  τ_nr0,  τ_d,  τ_0,   τ_1,  τ_l,   α,  β,  r,    C, η0s")
 		println(io, p_true)
@@ -144,5 +144,5 @@ if save_output
 	output[1:3,1] .= 0
 	output[1,3:end] .= 0
 	df = DataFrame(output,:auto)
-	CSV.write(string(homedir(),"\\OneDrive\\Uni_Master\\TRPL\\Data\\Syn\\Data\\$name_syn_data.csv"), df)
+	CSV.write(string(path_to_trpl,"\\Data\\Syn\\CSV\\$name_syn_data.csv"), df)
 end
