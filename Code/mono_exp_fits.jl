@@ -11,7 +11,7 @@ cd(string(path_to_trpl,"\\Data\\Real\\CSV"))
 ## output results? (true or false)
 out = false
 ## name of measurement 
-name_measurement = "C2704_hzb"
+name_measurement = "sample1"
 ## load measurement data
 data_measurement = Matrix(CSV.read(string(name_measurement,".csv"),DataFrame,skipto=2))
 ## function for data processing

@@ -12,8 +12,8 @@ cd(string(path_to_trpl,"\\Data\\Real"))
 ## output results? (true or false)
 out = false
 ## parameters measurement data
-name_measurement = "C2704_hzb"
-N_DA = 1e17
+name_measurement = "sample1"
+N_DA = 5e16 # sample1: N_DA = 5e16, sample2: N_DA = 1e17
 ## load measurement data
 data_measurement = Matrix(CSV.read(string(name_measurement,".csv"),DataFrame,skipto=2))
 ## function for data processing

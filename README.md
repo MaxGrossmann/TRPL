@@ -5,16 +5,16 @@ Code, Data and Results from the following publication: "insert DOI"
 
 ## Disclaimer
 The data from our two samples was provided by the *Fraunhofer ISE*. The measurements
-were made by *Klaus Schwarzburg* at the *Helmholtz-Zentrum Berlin*. The files for sample 1 are called 
-C2704_hzb..., for sample 2 C2702_hzb. The provided optimization scripts *trpl_opt_real.jl* and *trpl_opt_syn.jl*
-can be used in this repository for testing purposes only (output goes to "\TRPL\Optimizations\Test"). For a real optimziation
-one would start multiple optimization runs using an additional script by changing lines 12-19 to ARGS[1], ARGS[2],... in *trpl_opt_real.jl* and *trpl_opt_syn.jl*
+were made by *Klaus Schwarzburg* at the *Helmholtz-Zentrum Berlin*. The provided optimization scripts 
+*trpl_opt_real.jl* and *trpl_opt_syn.jl* can be used in this repository for testing purposes only 
+(output goes to "\TRPL\Optimizations\Test"). For a real optimziation one would start multiple optimization runs 
+using an additional script by changing lines 12-19 to ARGS[1], ARGS[2],... in *trpl_opt_real.jl* and *trpl_opt_syn.jl*
 
 (see https://docs.julialang.org/en/v1/manual/getting-started/). 
 
 For best performance
 one would do one optimization run per script distributed over multiple CPU cores (using 1-2 cores per optimization run), saving
-the results of each run in a seperate directory. We obtained our results in the described way by submitting multiple batch jobs on our local computer cluster. An example can be found in the following directory: "\TRPL\Optimizations\Real\C2702_hzb".
+the results of each run in a seperate directory. We obtained our results in the described way by submitting multiple batch jobs on our local computer cluster. An example can be found in the following directory: "\TRPL\Optimizations\Real\sample1".
 
 ## Code
 contains:
@@ -32,7 +32,7 @@ contains:
 contains:
 
 - subfolders Real & Syn
-    - Real: data from sample 1 (C2704) and sample 2 (C2702)
+    - Real: data from sample 1 and sample 2
     - Syn: generate synthetic data sets (subfolder CSV) and parameters used for there creation (subfolder Params)
 
 ## Optimizations
