@@ -7,7 +7,7 @@ using Pkg
 Pkg.activate("Project.toml")
 
 ## loading packages
-using DataFrames, CSV, XLSX, LinearAlgebra, ForwardDiff, NLopt, Measurements, PGFPlots, ColorSchemes
+using DataFrames, CSV, XLSX, LinearAlgebra, ForwardDiff, NLopt, Measurements
 
 ## directory
 cd(joinpath(path_to_trpl,"Data\\Real"))

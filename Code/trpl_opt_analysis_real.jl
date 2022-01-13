@@ -8,7 +8,7 @@ Pkg.activate("Project.toml")
 
 ## loading packages
 using OrdinaryDiffEq, LinearAlgebra, BlackBoxOptim, ForwardDiff,
-	  Printf, Distributions, DataFrames, PGFPlots, CSV, XLSX, ColorSchemes, NLopt
+	  Printf, Distributions, DataFrames, CSV, XLSX, NLopt
 
 ## directory
 cd(joinpath(path_to_trpl,"Data\\Real"))
@@ -60,22 +60,6 @@ init_par = vcat([   1,      1,   1,   1,    1,   1,  1e8,  1e8,  1e4, 10], repea
 ## ODEProblem definition with temporary u0 and parameters
 u0 = [0.1, 0, 0]
 prob = ODEProblem(rate_equations, u0, tspan, init_par)
-
-## function to generate the model for plotting
-function generateipl(par)
-    function prob_func(prob, i, repeat)
-        remake(prob, u0 = [par[num_pars+i], 0, 0])
-    end
-    ensemble_simu = EnsembleProblem(prob, prob_func = prob_func)
-    sol = Array(solve(ensemble_simu, Rosenbrock23(), p = par[1:num_pars-1], EnsembleThreads(),
-		      		  trajectories = num_traj, saveat = t, save_idxs = [1],
-		      		  reltol = 1e-6, abstol = 1e-8))[1,:,:]
-    ipl = zeros(size(sol))
-    for i = 1:num_traj
-    	ipl[:,i] = ((C_scaling * par[num_pars] / ND[i]) .* sol[:,i] .* (sol[:,i] .+ 1)) .+ background[i]
-    end
-    return ipl
-end
 
 ## definition loss function
 function loss(par)
@@ -140,9 +124,6 @@ p_fit = sorted_opt_results[1,2:end]
 ## check that the loss function defined here gives the same result
 println("sanity check for loss: loss(p_fit) - loss(p_csv) = "*
         "$(loss(p_fit) .- sorted_opt_results[1,1])")
-
-## calculate fit model
-IPL_opt = generateipl(p_fit)
 
 ## rescaling parameters for differentiation
 p_r = copy(p_fit)
@@ -258,6 +239,7 @@ if out
 	## output file path
 	file_name = "$name_measurement.xlsx"
 	xlsx_path = joinpath(path_to_trpl,"Results\\Real",file_name)
+
 	## save output
 	if isfile(xlsx_path)
 		rm(xlsx_path)
