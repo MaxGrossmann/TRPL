@@ -2,16 +2,18 @@
 cd(@__DIR__)
 using Pkg
 Pkg.activate("Project.toml")
-## percentage x of Al, wavelengths λ and index of refraction n from publication Aspn 1986
+
+## percentage x of Al, wavelengths λ and index of refraction n from publication Aspnes 1986
 x = [0.491 0.590]
-lambda = [0.520]
+λ = [0.520]
 n = [3.8264 + 0.19880im;
      3.7477 + 0.15232im]
 N = real(n)
 k = imag(n)
+
 ## interpolation of n for wanted x
 x_wanted = [0.509]
-l = length(lambda)
+l = length(λ)
 m = length(x_wanted)
 N_wanted = zeros(m,l)
 k_wanted = zeros(m,l)
@@ -25,10 +27,11 @@ for i = 1:l
 end
 N_wanted = round.(N_wanted,sigdigits=4)
 k_wanted = round.(k_wanted,sigdigits=4)
+
 ## output solution
 println("")
 for j = 1:m
     for i = 1:l
-    println("n(x=$(x_wanted[j]), λ = $(lambda[i])) = $(N_wanted[i,j]) + $(k_wanted[i,j])i")
+        println("n(x = $(x_wanted[j]), λ = $(lambda[i])) = $(N_wanted[i,j]) + $(k_wanted[i,j])i")
     end
 end
