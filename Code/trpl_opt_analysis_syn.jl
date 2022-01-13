@@ -16,9 +16,6 @@ cd(joinpath(path_to_trpl,"Data\\Syn\\CSV"))
 ## output results? (true or false)
 out = false
 
-## Poisson noise? (true or false)
-noise = true 
-
 ## index of synthetic data set
 idx_syn_data = 1
 

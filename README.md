@@ -10,7 +10,8 @@ were made by *Klaus Schwarzburg* at the *Helmholtz-Zentrum Berlin*. The provided
 (output goes to "\TRPL\Optimizations\Test"). For a real optimziation one would start multiple optimization runs 
 using an additional script by changing lines 12-19 to ARGS[1], ARGS[2],... in *trpl_opt_real.jl* and *trpl_opt_syn.jl*
 
-(see https://docs.julialang.org/en/v1/manual/getting-started/). 
+When first using the code you need to instantiate the packages using Pkg.instantiate() inside the Code directory.
+(for more information visit https://docs.julialang.org/en/v1/). 
 
 For best performance
 one would do one optimization run per script distributed over multiple CPU cores (using 1-2 cores per optimization run), saving
