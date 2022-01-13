@@ -45,9 +45,8 @@ contains:
     - Syn: optimization results for the synthetic data sets 1-5
 
 Each folder contains 25 subfolders for each optimization run. In each of these folders
-are .log and .err files, a .lsf script to submit a batchjob at our local computing cluster and 
-a .csv containing the optimization fitness, optimizied parameters, parameter bounds and the random seed.
+contains a .csv file with the optimization fitness, optimizied parameters, parameter bounds and the random seed.
 
 ## Results
 
-Contains final results, all optimization runs and the data used as.xlsx files for real and synthetic optimizations. 
+Contains final results, all optimization runs and the data used as .xlsx files for real and synthetic optimizations. 
