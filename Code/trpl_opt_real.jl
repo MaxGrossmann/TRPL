@@ -1,28 +1,38 @@
 ## path to TRPL folder --> set it before running the code!
-path_to_trpl = "C:\\TRPL" # some path to the TRPL folder
+path_to_trpl = "D:\\Projects\\TRPL" # some path to the TRPL folder (just an example here)
+
 ## activate package environment
 cd(@__DIR__)
 using Pkg
 Pkg.activate("Project.toml")
+
 ## loading Packages
 using OrdinaryDiffEq, DiffEqSensitivity, ForwardDiff, LinearAlgebra, 
       Random, Printf, Distributions, BlackBoxOptim, NLopt, DataFrames, CSV
+
 ## input parameters
-# Parameters here are setup for a quick test! For a real optimization set n_iter >= 2500000, max_time_loc_opt = 3600 to be save!
-job_dir = string(path_to_trpl,"\\Optimizations\\Test\\Job1") # job directory (just for tests)
+# Parameters here are setup for a quick test! 
+# For a real optimization set n_iter >= 2500000, max_time_loc_opt = 3600 to be save!
+job_dir = joinpath(path_to_trpl,"Optimizations\\Test\\Job1") # job directory (just for tests)
 name_measurement = "sample1" # name of measurement
 n_iter = 2500 # number of optimization iteration and runs
 n_runs =  1 # number of optimization runs
 ftol_loc_opt = 1e-14 # tolerance for local optimization
 max_time_loc_opt = 15 # maixmum time for local optimization
-LB = vcat([   1,      1,   1,    1,    1,    1,  1e8,  1e8,  1e4,  10], repeat([1e-6],num_traj)) # lower parameter bounds
-UB = vcat([5000,  5000, 1000, 1000,  1e9, 1000,  1e4,  1e4, 1000, 1e6], repeat([ 1.0],10)) # upper parameter bounds
+lb = vcat([   1,      1,   1,    1,    1,    1,    1,    1,    1,   1], 
+          repeat([1e-6],10)) # lower parameter bounds
+ub = vcat([5000,  5000, 1000, 1000,  1e9, 1000,  1e4,  1e4, 1000, 1e6], 
+          repeat([ 1.0],10)) # upper parameter bounds
+
 ## data directory
-cd(string(path_to_trpl,"\\Data\\Real"))
+cd(joinpath(path_to_trpl,"Data\\Real"))
+
 ## load measurement data
-data_measurement = Matrix(CSV.read(string(name_measurement,".csv"),DataFrame,datarow=2))
+data_measurement = Matrix(CSV.read(name_measurement*".csv",DataFrame,skipto=2))
+
 ## job directory
 cd(job_dir)
+
 ## function for data processing
 function data_processing(data)
     t = data[4:end,1]
@@ -42,11 +52,14 @@ function data_processing(data)
     C_scaling = maximum(IPL)
     return t, tspan, num_traj, num_pars, dims, IPL, idx_IPL, P, ND, background, N, C_scaling 
 end
-## load experimental data
+
+## process measurement data
 t, tspan, num_traj, num_pars, dims, IPL, idx_IPL, P, ND, background, N, C_scaling = data_processing(data_measurement)
+
 ## lower and upper bound dimension
-LB = LB[1:dims]
-UB = UB[1:dims]
+lb = lb[1:dims]
+ub = ub[1:dims]
+
 ## definition rate equations
 function rate_equations(du, u, p, t)
     du[1] = -((1 - u[2]) / p[3]) * u[1] - ((1 - u[3]) / p[4]) * u[1] + (1 / p[5]) * u[3] * 1 / p[7] -
@@ -54,9 +67,11 @@ function rate_equations(du, u, p, t)
     du[2] = ((1 - u[2]) / (p[3])) * p[8] * u[1]
     du[3] = ((1 - u[3]) / p[4]) * p[7] * u[1] - u[3] / p[5] - u[3] / p[6]
 end
+
 ## ODEProblem definition with temporary u0 and parameters
 u0 = [0.1, 0, 0]
-prob = ODEProblem(rate_equations, u0, tspan, LB)
+prob = ODEProblem(rate_equations, u0, tspan, lb)
+
 ## definition loss function
 function loss(par)
     l = 0.0
@@ -65,38 +80,40 @@ function loss(par)
     end
     ensemble_simu = EnsembleProblem(prob, prob_func = prob_func)
     sol = Array(solve(ensemble_simu, Rosenbrock23(), p = par[1:num_pars-1], EnsembleThreads(),
-		      trajectories = num_traj, saveat = t,save_idxs = [1],
-		      reltol=1e-6,abstol=1e-8))[1,:,:]
+		              trajectories = num_traj, saveat = t,save_idxs = [1],
+		              reltol=1e-6,abstol=1e-8))[1,:,:]
     for i = 1:num_traj
-	model = ((C_scaling * par[num_pars] / ND[i]) .* sol[:,i] .* (sol[:,i] .+ 1)) .+ background[i]
-	idx_used = idx_IPL[:,i] .& (model .> 0)
-	l += sum((model[idx_used]) .- (IPL[idx_used,i] .* log.(model[idx_used])))
+        model = ((C_scaling * par[num_pars] / ND[i]) .* sol[:,i] .* (sol[:,i] .+ 1)) .+ background[i]
+        idx_used = idx_IPL[:,i] .& (model .> 0)
+        l += sum((model[idx_used]) .- (IPL[idx_used,i] .* log.(model[idx_used])))
     end
     return l
 end
-## definition nlopt loss function
+
+## definition of loss function for NLopt
 function loss_nlopt(par::Vector,grad::Vector)
     if length(grad) > 0
-	grad[:] = ForwardDiff.gradient(loss,par)
+	    grad[:] = ForwardDiff.gradient(loss,par)
     end
     return loss(par)
 end
+
 ## multi run optimization
 function multirun_opt(n_iter,n_runs)
     results = Array{Any}(undef,(n_runs+2,dims+3))
     results[1:n_runs,1] = ["Run $i" for i = 1:n_runs]
     results[end-1:end,[1,2,dims+3]] = ["LB" "x" "x";"UP" "x" "x"]
-    results[end-1:end,3:end-1] = hcat(LB,UB)'
+    results[end-1:end,3:end-1] = hcat(lb,ub)'
     for i = 1:n_runs
         seed_num = abs(rand(Int))
         println("$(seed_num) RNG Seed")
         Random.seed!(seed_num)
         println("Run $(i)")
         flush(stdout)
-        optim_setup = bbsetup(loss,Method = :generating_set_search,
-                    SearchRange = collect(zip(LB, UB)),
-                    NumDimensions = dims, MaxFuncEvals = n_iter,
-                    TraceMode = :compact, TraceInterval = 30)
+        optim_setup = bbsetup(loss,Method = :adaptive_de_rand_1_bin_radiuslimited,
+                              SearchRange = collect(zip(lb, ub)),
+                              NumDimensions = dims, MaxFuncEvals = n_iter,
+                              TraceMode = :compact, TraceInterval = 30)
         optim_result = bboptimize(optim_setup)
         p_optim = best_candidate(optim_result)
         optl = Opt(:LD_LBFGS,dims)
@@ -114,13 +131,16 @@ function multirun_opt(n_iter,n_runs)
 end
 ## multi run optimization
 res_opt = multirun_opt(n_iter,n_runs)
+
 ## output preparation optimization results
 df_opt = DataFrame(res_opt,:auto)
 var_names_opt = vcat(["Run/Bounds","F_min", "τ_r0", "τ_nr0", "τ_d",
-		      "τ_0", "τ_1", "τ_l", "N_l", "N_D", "r","C"],
-		      [repeat("η_0$i", 1) for i = 1:num_traj],"Seed")
+		              "τ_0", "τ_1", "τ_l", "N_l", "N_D", "r","C"],
+		              [repeat("η_0$i", 1) for i = 1:num_traj],"Seed")
 rename!(df_opt, var_names_opt)
+
 ## output results
 CSV.write("$(name_measurement)_opt_par.csv", df_opt)
+
 ## message
 println("Script has finished")

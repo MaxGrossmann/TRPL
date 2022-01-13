@@ -14,10 +14,10 @@ using OrdinaryDiffEq, LinearAlgebra, StaticArrays, Random, NLopt, DelimitedFiles
 pyplot()
 default(size = (800, 600))
 
-## save?
-save_output = false
+## save output? (true or false)
+out = false
 
-## noise? 
+## noise? (true or false)
 noise = true
 
 ## experimental parameters (example for synthetic data set 1) 
@@ -84,6 +84,7 @@ IPL = generateipl(p_true)
 if noise
 	IPL = pois_rand.(Random.seed!(rng_seeds[idx_syn]),IPL)
 end
+
 ## get non-zero indicies
 idx_IPL = zeros(Bool,size(IPL))
 for i = 1:num_traj
@@ -128,9 +129,9 @@ end
 display(plt)
 
 ## save output
-if save_output
+if out
 	# save input parameters
-	io = open(string(path_to_trpl,"\\Data\\Syn\\Params\\$name_syn_data.txt"), "w")
+	io = open(joinpath(path_to_trpl,"Data\\Syn\\Params\\$name_syn_data.txt"), "w")
 		println(io, "parameters")
 		println(io, "τ_r0,  τ_nr0,  τ_d,  τ_0,   τ_1,  τ_l,   α,  β,  r,    C, η0s")
 		println(io, p_true)
@@ -162,5 +163,5 @@ if save_output
 	output[1:3,1] .= 0
 	output[1,3:end] .= 0
 	df = DataFrame(output,:auto)
-	CSV.write(string(path_to_trpl,"\\Data\\Syn\\CSV\\$name_syn_data.csv"), df)
+	CSV.write(joinpath(path_to_trpl,"Data\\Syn\\CSV\\$name_syn_data.csv"), df)
 end

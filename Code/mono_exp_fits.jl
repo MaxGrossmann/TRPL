@@ -41,9 +41,9 @@ function data_processing(data)
     return t[1:idx_end], tspan, num_traj, dims, IPL[1:idx_end,:], idx_IPL[1:idx_end,:], P, ND, background, N, C_scaling 
 end
 
-## loading of experimental data
+## process measurement data
 t, tspan, num_traj, dims, IPL, idx_IPL, P, ND, background, N, C_scaling = data_processing(data_measurement)
-IPL = IPL[:,1]
+IPL = IPL[:,1] # we use the transient at the lowest laser power for the mono-exponential fit
 background = background[1]
 
 ## mono-exponential model
