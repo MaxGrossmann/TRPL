@@ -1,5 +1,5 @@
 ## path to TRPL folder --> set it before running the code!
-path_to_trpl = "C:\\Users\\Max\\OneDrive\\Uni_Master\\TRPL\\Git\\TRPL" # some path to the TRPL folder (just an example here)
+path_to_trpl = "D:\\Projects\\TRPL" # some path to the TRPL folder (just an example here)
 
 ## activate package environment
 cd(@__DIR__)
