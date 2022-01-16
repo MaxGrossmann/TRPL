@@ -36,6 +36,28 @@ contains:
     - Real: data from sample 1 and sample 2
     - Syn: generate synthetic data sets (subfolder CSV) and parameters used for there creation (subfolder Params)
 
+structure of real data sets:
+
+- colums: time, transient 1, transient 2, ..., transient N
+
+- lines 1-3 (skipping the 1. colum in each line) contain the following experimental parameters: 
+    - laser power P
+    - ND filter values
+    - average background noise b
+
+- line 4-end contains the binned experimental data (time, transient 1, transient 2, ..., transient N)
+
+structure of synthetic data sets:
+
+- colums: time, transient 1, transient 2, ..., transient N
+
+- lines 1-3 (skipping the 1. colum in each line) contain the following parameters: 
+    - C scaling factor
+    - ND filter values
+    - background noise b
+
+- line 4-end contains the binned synthetic data (time, transient 1, transient 2, ..., transient N)
+
 ## Optimizations
 
 contains: 

@@ -23,7 +23,7 @@ N_DA = 5e16 # sample1: N_DA = 5e16, sample2: N_DA = 1e17
 ## load measurement data
 data_measurement = Matrix(CSV.read(name_measurement*".csv",DataFrame,skipto=2))
 
-## function for data processing
+## function for data processing (data structre is explained in README.md)
 function data_processing(data)
     t = data[4:end,1]
     num_traj = size(data,2)-1

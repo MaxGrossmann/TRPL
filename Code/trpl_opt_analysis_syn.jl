@@ -22,7 +22,7 @@ idx_syn_data = 1
 ## load measurement data
 data_measurement = Matrix(CSV.read("syn_data_$idx_syn_data.csv",DataFrame,skipto=2))
 
-## function for data processing
+## function for data processing (data structre is explained in README.md)
 function data_processing(data)
 	t = data[4:end,1]
 	num_traj = size(data,2)-1

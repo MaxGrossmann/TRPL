@@ -33,7 +33,7 @@ data_measurement = Matrix(CSV.read(name_measurement*".csv",DataFrame,skipto=2))
 ## job directory
 cd(job_dir)
 
-## function for data processing
+## function for data processing (data structre is explained in README.md)
 function data_processing(data)
     t = data[4:end,1]
     num_traj = size(data,2)-1
