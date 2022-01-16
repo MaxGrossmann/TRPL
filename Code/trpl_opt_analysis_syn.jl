@@ -219,8 +219,8 @@ error_table[5,2:end] = vcat(abs.(1 .- (loss(inv(sf)*p_opt) ./ loss(p_true))) * 1
 error_table[6,1] = "avg. rel. error in %"
 error_table[6,2:end] = vcat(["/"],mean(abs.(1 .- (inv(sf)*p_opt ./ p_true)) * 100),
 				            repeat(["/"],dims-1))
-error_table[7,1] = "S_e"
-error_table[7,2:end] = vcat(["/"],se_output)
+error_table[7,1] = "ci95"
+error_table[7,2:end] = vcat(["/"],2.98*se_output)
 error_table[8,1] = "lb"
 error_table[8,2:end] = vcat(["/"],lb)
 error_table[9,1] = "ub"

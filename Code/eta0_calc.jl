@@ -47,7 +47,9 @@ fwhm_int = 0.754 # from fwhm_int.jl script
 eta_0    = round.(fwhm_int*n/N_DA,sigdigits=3)
 
 ## print result
+println("P = $(P)")
 println("η₀ = $(eta_0)")
+
 
 ## write output
 if out
@@ -57,6 +59,7 @@ if out
         rm(file_name)
     end
     open(file_name,"w") do io
+        println(io,"\nP = $(P)")
         println(io,"\nη0 = $(eta_0)")
     end
 end
