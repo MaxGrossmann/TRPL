@@ -19,6 +19,11 @@ out = false
 ## index of synthetic data set
 idx_syn_data = 1
 
+## confidence level (1-α)
+alpha = 0.05 # corresponds to a 95% confidence level
+q = quantile(Normal(),1-alpha/2)
+
+
 ## load measurement data
 data_measurement = Matrix(CSV.read("syn_data_$idx_syn_data.csv",DataFrame,skipto=2))
 
@@ -220,7 +225,7 @@ error_table[6,1] = "avg. rel. error in %"
 error_table[6,2:end] = vcat(["/"],mean(abs.(1 .- (inv(sf)*p_opt ./ p_true)) * 100),
 				            repeat(["/"],dims-1))
 error_table[7,1] = "ci95"
-error_table[7,2:end] = vcat(["/"],2.98*se_output)
+error_table[7,2:end] = vcat(["/"],q*se_output)
 error_table[8,1] = "lb"
 error_table[8,2:end] = vcat(["/"],lb)
 error_table[9,1] = "ub"

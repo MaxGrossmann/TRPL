@@ -20,6 +20,10 @@ out = false
 name_measurement = "sample1"
 N_DA = 5e16 # sample1: N_DA = 5e16, sample2: N_DA = 1e17
 
+## confidence level (1-α)
+alpha = 0.05 # corresponds to a 95% confidence level
+q = quantile(Normal(),1-alpha/2)
+
 ## load measurement data
 data_measurement = Matrix(CSV.read(name_measurement*".csv",DataFrame,skipto=2))
 
@@ -196,7 +200,7 @@ par_table[1,2:end] = vcat(loss(p_fit),p_fit_output)
 par_table[2,1] = "p_opt"
 par_table[2,2:end] = vcat(loss(inv(sf)*p_opt),p_opt_output)
 par_table[3,1] = "ci95"
-par_table[3,2:end] = vcat(["/"],2.98*se_output)
+par_table[3,2:end] = vcat(["/"],q*se_output)
 par_table[4,1] = "lb"
 par_table[4,2:end] = vcat(["/"],lb)
 par_table[5,1] = "ub"
