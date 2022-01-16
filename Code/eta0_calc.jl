@@ -51,7 +51,7 @@ println("η₀ = $(eta_0)")
 
 ## write output
 if out
-    cd(string(path_to_trpl,"\\Results\\Real"))
+    cd(joinpath(path_to_trpl,"Results\\Real"))
     file_name = "eta0_$(name_measurement).txt"
     if isfile(file_name)
         rm(file_name)
