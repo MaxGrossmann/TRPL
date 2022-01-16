@@ -13,7 +13,7 @@ using DataFrames, CSV, XLSX, LinearAlgebra, ForwardDiff, NLopt, Measurements
 cd(joinpath(path_to_trpl,"Data\\Real"))
 
 ## output results? (true or false)
-out = true
+out = false
 
 ## name of measurement 
 name_measurement = "sample1"
