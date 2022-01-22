@@ -80,6 +80,10 @@ SE_opt = sqrt.(diag(inv(H_opt)))
 ## print results
 println("\nτ_mono = $(round(p_opt[2],sigdigits=3)) ± $(round(SE_opt[2],sigdigits=3)) ns")
 
+## confidence level (1-α)
+alpha = 0.05 # corresponds to a 95% confidence level
+q = quantile(Normal(),1-alpha/2)
+
 ## get fit parameters with standard erros
 cd(string(path_to_trpl,"\\Results\\Real"))
 files = filter(x->endswith(x, ".xlsx"), readdir())
@@ -91,8 +95,8 @@ end
 xf = XLSX.readxlsx(files[idx])
 sh = xf["Results"]
 p_fit = Float64.(sh["C3:K3"])
-SE_fit = Float64.(sh["C4:K4"])
-p_fit = p_fit .± SE_fit
+CIHW_fit = Float64.(sh["C4:K4"])
+p_fit = p_fit .± (CIHW_fit ./ q)
 
 ## compair to effective lifetime 
 tau_eff = round(sum([1/p_fit[i] for i = 1:6]) .^ -1,sigdigits=3)
