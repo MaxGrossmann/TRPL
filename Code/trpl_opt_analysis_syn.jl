@@ -77,7 +77,7 @@ function loss(par)
 		      		  reltol = 1e-6,abstol = 1e-8))[1,:,:]
     for i = 1:num_traj
 		model = ((C_scaling * par[num_pars] / ND[i]) .* sol[:,i] .* (sol[:,i] .+ 1)) .+ background[i]
-		idx_used = idx_IPL[:,i] .& (model .> 0)
+		idx_used = idx_IPL[:,i] .& (model .> 0) # we ignore zeros for the log
 		l += sum((model[idx_used]) .- (IPL[idx_used,i] .* log.(model[idx_used])))
     end
     return l
@@ -155,7 +155,7 @@ function loss_rescaled(par)
 		      		  reltol=1e-6,abstol=1e-8))[1,:,:]
     for i = 1:num_traj
 		model = ((C_scaling * _par[num_pars] / ND[i]) .* sol[:,i] .* (sol[:,i] .+ 1)) .+ background[i]
-		idx_used = idx_IPL[:,i] .& (model .> 0)
+		idx_used = idx_IPL[:,i] .& (model .> 0) # we ignore zeros for the log
 		l += sum((model[idx_used]) .- (IPL[idx_used,i] .* log.(model[idx_used])))
     end
     return l
