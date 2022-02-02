@@ -8,7 +8,7 @@ Pkg.activate("Project.toml")
 
 ## loading packages
 using DataFrames, CSV, XLSX, LinearAlgebra, 
-      Distributioms, Measurements, ForwardDiff, NLopt
+      Distributions, Measurements, ForwardDiff, NLopt
 
 ## directory
 cd(joinpath(path_to_trpl,"Data\\Real"))
