@@ -134,8 +134,8 @@ res_opt = multirun_opt(n_iter,n_runs)
 
 ## output preparation optimization results
 df_opt = DataFrame(res_opt,:auto)
-var_names_opt = vcat(["Run/Bounds","F_min", "τ_r0", "τ_nr0", "τ_d",
-		              "τ_0", "τ_1", "τ_l", "N_l", "N_D", "r","C"],
+var_names_opt = vcat(["Run/Bounds","F_min", "τ_r0", "τ_nr0", "τ_2t",
+		              "τ_1t", "τ_1e", "τ_1d", "α", "β", "r","C"],
 		              [repeat("η_0$i", 1) for i = 1:num_traj],"Seed")
 rename!(df_opt, var_names_opt)
 

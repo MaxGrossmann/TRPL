@@ -225,8 +225,8 @@ data_table[3,1] = "ND"
 data_table[4,1] = "background"
 
 ## variable names 
-var_names = vcat(["","l_opt", "τ_r0", "τ_nr0", "τ_d",
-				  "τ_0", "τ_1", "τ_l", "N_l", "N_D", "r", "C"],
+var_names = vcat(["","l_opt", "τ_r0", "τ_nr0", "τ_2t",
+				  "τ_1t", "τ_1e", "τ_1d", "N_l", "N_D", "r", "C"],
 	 			  [repeat("η_0$i", 1) for i = 1:num_traj])
 
 ## generate output data

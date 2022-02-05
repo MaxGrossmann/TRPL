@@ -33,15 +33,10 @@ q = quantile(Normal(),1-alpha/2)
 N_V = 9.51e18
 
 ## get parameters
-data = Array{Any}(undef,3,num_pars + 1)
-data[1,1] = ""
-data[1,2:end] = ["\$\\phi \\tau_r^0\$", "\$\\tau_{nr}^0\$" ,"\$\\tau_{dt}\$", 
-                 "\$\\tau_{st}\$", "\$\\tau_{se}\$", "\$\\tau_{sd}\$",
-                 "\$N_{st}\$",  "\$N_{dt}\$", "\$r\$" ,"\$\\tilde{C}\$" ]
-data[2:end,1] = ["\$p_{\\text{fit}}\$", "\$\\text{CI}\$"]
-data[2:3,2:end] = sh["C3:L4"]
-data[3,2:end] ./= q
-p = data[2,2:end] .± data[3,2:end]
+data = Array{Any}(undef,2,num_pars + 1)
+data[1:2,2:end] = sh["C3:L4"]
+data[2:end] ./= q
+p = data[1,2:end] .± data[2,2:end]
 
 ## calculate band offset
 offset = -25.7e-3 * log((p[4] * p[7]) / (p[5] * N_V))
