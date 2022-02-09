@@ -7,7 +7,7 @@ Pkg.activate("Project.toml")
 λ = 520 # nm
 N = [1.0; 3.812 + 0.1903im; 4.1891+0.3633im] # air - window layer - absorber layer
 D = 100 # thickness of window layer
-# (refractive indices are from https://refractiveindex.info/)
+# (refractive indices are from https://refractiveindex.info/, data by Aspnes 1986)
 
 ## function for fresnel coefficients (for perpendicular incident)
 function fresnel_coeff(n,m,pol)

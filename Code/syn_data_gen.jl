@@ -133,7 +133,7 @@ if out
 	# save input parameters
 	io = open(joinpath(path_to_trpl,"Data\\Syn\\Params\\$name_syn_data.txt"), "w")
 		println(io, "parameters")
-		println(io, "τ_r0,  τ_nr0,  τ_d,  τ_0,   τ_1,  τ_l,   α,  β,  r,    C, η0s")
+		println(io, "τ_r0, τ_nr0, τ_2t, τ_1t,  τ_1e, τ_1d, α, β, r, C, η0s")
 		println(io, p_true)
 		println(io, "C scaling")
 		println(io, C_scaling)

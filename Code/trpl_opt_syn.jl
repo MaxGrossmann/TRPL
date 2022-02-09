@@ -141,7 +141,7 @@ var_names_opt = vcat(["Run/Bounds","F_min", "τ_r0", "τ_nr0", "τ_2t",
 rename!(df_opt, var_names_opt)
 
 ## output results
-CSV.write("syn_data_$(syn_data_idx)_opt_par.csv", df_opt)
+CSV.write("syn_data_$(syn_data_idx)_opt_res.csv", df_opt)
 
 ## message
 println("Script has finished")
