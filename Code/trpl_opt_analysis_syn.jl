@@ -65,6 +65,22 @@ init_par = vcat([   1,      1,   1,   1,    1,   1,  1e8,  1e8,  1e4, 10], repea
 u0 = [0.1, 0, 0]
 prob = ODEProblem(rate_equations, u0, tspan, init_par)
 
+## function to generate the model for plotting
+function generateipl(par)
+    function prob_func(prob, i, repeat)
+        remake(prob, u0 = [par[num_pars+i], 0, 0])
+    end
+    ensemble_simu = EnsembleProblem(prob, prob_func = prob_func)
+    sol = Array(solve(ensemble_simu, Rosenbrock23(), p = par[1:num_pars-1], EnsembleThreads(),
+		      		  trajectories = num_traj, saveat = t, save_idxs = [1],
+		      		  reltol = 1e-6, abstol = 1e-8))[1,:,:]
+    ipl = zeros(size(sol))
+    for i = 1:num_traj
+    	ipl[:,i] = ((C_scaling * par[num_pars] / ND[i]) .* sol[:,i] .* (sol[:,i] .+ 1)) .+ background[i]
+    end
+    return ipl
+end
+
 ## definition loss function
 function loss(par)
     l = 0.0
@@ -191,7 +207,7 @@ opt.maxtime = 600
 (optf,p_opt,ret) = optimize(opt,p_rescaled)
 
 ## calculate gradient
-g= ForwardDiff.gradient(loss_rescaled,p_opt)
+g = ForwardDiff.gradient(loss_rescaled,p_opt)
 
 ## calculate hessian
 H = ForwardDiff.hessian(loss_rescaled,p_opt)
@@ -201,6 +217,9 @@ e = eigvals(H)
 
 ## calculate standard errors of fit parameters
 se = inv(Diagonal(sf)) * inv(H) * inv(Diagonal(sf)) |> diag .|> sqrt
+
+## generate fit data for plot
+IPL_opt = generateipl(inv(sf) * p_opt)
 
 ## prepare output
 p_true_output = copy(p_true) 
@@ -256,6 +275,8 @@ var_names = vcat(["","l_opt", "τ_r0", "τ_nr0", "τ_2t",
 ## generate output data
 df_res = DataFrame(error_table,:auto)
 rename!(df_res,var_names)
+df_fit = DataFrame(hcat(t,IPL_opt),:auto)
+rename!(df_fit,vcat("t",["Transient $i" for i = 1:num_traj]))
 df_opt = DataFrame(opt_table,:auto)
 rename!(df_opt,vcat(var_names,"Seed"))
 df_data = DataFrame(data_table,:auto)
@@ -272,6 +293,7 @@ if out
 		rm(xlsx_path)
 	end
 	XLSX.writetable(xlsx_path, Results = (collect(DataFrames.eachcol(df_res)), DataFrames.names(df_res)),
+					Fits = (collect(DataFrames.eachcol(df_fit)), DataFrames.names(df_fit)),
 					Opts = (collect(DataFrames.eachcol(df_opt)), DataFrames.names(df_opt)),
 					Data = (collect(DataFrames.eachcol(df_data)), DataFrames.names(df_data)))
 end
