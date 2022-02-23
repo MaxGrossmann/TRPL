@@ -3,7 +3,7 @@
 
 Code, Data and Results from the following publication: "insert DOI"
 
-If you use our data or software as part of your research, teaching, or other activities, 
+If you use our data or software as part of your research, teaching, or other activities, \
 we would be grateful if you could cite our work.
 
 ## Disclaimer
