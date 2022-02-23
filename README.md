@@ -75,7 +75,7 @@ contains a .csv file with the optimization fitness, optimizied parameters, param
 ## Results
 
 Contains final results, parameter sets for all optimization runs and the data used and the fit curves as one .xlsx files for each real or synthetic data set.
-The residual analysis can be found in separated .csv files.
+The residual analysis can be found in separated .csv files. For the real data sets we included the results of the approximation of the experimental initial conditions as well as the results of the mono-exponential fits of the lowest transients of each real data set. 
 
 ## Licencing 
 
