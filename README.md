@@ -74,7 +74,8 @@ contains a .csv file with the optimization fitness, optimizied parameters, param
 
 ## Results
 
-Contains final results, all optimization runs and the data used as .xlsx files for real and synthetic optimizations. 
+Contains final results, parameter sets for all optimization runs and the data used and the fit curves as one .xlsx files for each real or synthetic data set.
+The residual analysis can be found in separated .csv files.
 
 ## Licencing 
 
