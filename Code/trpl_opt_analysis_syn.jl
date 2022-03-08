@@ -228,31 +228,33 @@ p_opt_output = inv(sf) * copy(p_opt)
 se_output = copy(se)
 
 ## error table
-error_table = Array{Any}(undef,11,dims+2)
-error_table[1,1] = "p_fit"
-error_table[1,2:end] = vcat(loss(p_fit),p_fit_output)
-error_table[2,1] = "p_opt"
-error_table[2,2:end] = vcat(loss(inv(sf)*p_opt),p_opt_output)
-error_table[3,1] = "p_true"
-error_table[3,2:end] = vcat(loss(p_true),p_true_output)
-error_table[4,1] = "difference"
-error_table[4,2:end] = vcat(loss(inv(sf)*p_opt) .- loss(p_true),abs.(p_opt_output .- p_true_output))
-error_table[5,1] = "rel. error in %"
-error_table[5,2:end] = vcat(abs.(1 .- (loss(inv(sf)*p_opt) ./ loss(p_true))) * 100,
+# p_fit is best global optimization result
+# p_opt is the final result after the reparameterized local optimization
+par_table = Array{Any}(undef,11,dims+2)
+par_table[1,1] = "p_fit"
+par_table[1,2:end] = vcat(loss(p_fit),p_fit_output)
+par_table[2,1] = "p_opt"
+par_table[2,2:end] = vcat(loss(inv(sf)*p_opt),p_opt_output)
+par_table[3,1] = "p_true"
+par_table[3,2:end] = vcat(loss(p_true),p_true_output)
+par_table[4,1] = "difference"
+par_table[4,2:end] = vcat(loss(inv(sf)*p_opt) .- loss(p_true),abs.(p_opt_output .- p_true_output))
+par_table[5,1] = "rel. error in %"
+par_table[5,2:end] = vcat(abs.(1 .- (loss(inv(sf)*p_opt) ./ loss(p_true))) * 100,
 						    abs.(1 .- (inv(sf)*p_opt ./ p_true)) * 100)
-error_table[6,1] = "avg. rel. error in %"
-error_table[6,2:end] = vcat(["/"],mean(abs.(1 .- (inv(sf)*p_opt ./ p_true)) * 100),
+par_table[6,1] = "avg. rel. error in %"
+par_table[6,2:end] = vcat(["/"],mean(abs.(1 .- (inv(sf)*p_opt ./ p_true)) * 100),
 				            repeat(["/"],dims-1))
-error_table[7,1] = "cihw95"
-error_table[7,2:end] = vcat(["/"],q*se_output)
-error_table[8,1] = "lb"
-error_table[8,2:end] = vcat(["/"],lb)
-error_table[9,1] = "ub"
-error_table[9,2:end] = vcat(["/"],ub)
-error_table[10,1] = "gradient"
-error_table[10,2:end] = vcat(["/"],g)
-error_table[11,1] = "hessian eigenvalues (sorted)"
-error_table[11,2:end] = vcat(["/"],e)
+par_table[7,1] = "cihw95"
+par_table[7,2:end] = vcat(["/"],q*se_output)
+par_table[8,1] = "lb"
+par_table[8,2:end] = vcat(["/"],lb)
+par_table[9,1] = "ub"
+par_table[9,2:end] = vcat(["/"],ub)
+par_table[10,1] = "gradient"
+par_table[10,2:end] = vcat(["/"],g)
+par_table[11,1] = "hessian eigenvalues (sorted)"
+par_table[11,2:end] = vcat(["/"],e)
 
 ## optimation result table
 opt_table = Array{Any}(undef,n_opt,dims+3)
@@ -273,7 +275,7 @@ var_names = vcat(["","l_opt", "τ_r0", "τ_nr0", "τ_2t",
 	 			  [repeat("η_0$i", 1) for i = 1:num_traj])
 
 ## generate output data
-df_res = DataFrame(error_table,:auto)
+df_res = DataFrame(par_table,:auto)
 rename!(df_res,var_names)
 df_fit = DataFrame(hcat(t,IPL_opt),:auto)
 rename!(df_fit,vcat("t",["Transient $i" for i = 1:num_traj]))
