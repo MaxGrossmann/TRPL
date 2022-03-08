@@ -76,6 +76,9 @@ contains a .csv file with the optimization fitness, optimizied parameters, param
 Contains final results, parameter sets for all optimization runs, the data used and the fit curves as one .xlsx files for each real or synthetic data set.
 The residual analysis can be found in separated .csv files. For the real data sets we included the results of the approximation of the experimental initial conditions as well as the results of the mono-exponential fits of the lowest transients of each real data set. 
 
+In the results tab of the .xlsx-files one finds p_fit and p_opt. p_fit is the best parameter set found in all global optimizations.
+p_opt is the final result obtained through a reparameterized local optimization starting at p_fit.
+
 ## Licencing 
 
 Copyright (c) 2022 Max Großmann
