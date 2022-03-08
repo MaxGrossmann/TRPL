@@ -1,4 +1,4 @@
-# TRPL
+# Time-Resolved Photoluminescence (TRPL)
 **Beyond curve fitting: Modelling photoluminescence kinetics**
 
 If you use our data or software as part of your research, teaching, or other activities, \
