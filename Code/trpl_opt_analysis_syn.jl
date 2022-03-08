@@ -229,7 +229,7 @@ se_output = copy(se)
 
 ## error table
 # p_fit is best global optimization result
-# p_opt is the final result after the reparameterized local optimization
+# p_opt is the final result after the reparameterized local optimization (started at p_fit)
 par_table = Array{Any}(undef,11,dims+2)
 par_table[1,1] = "p_fit"
 par_table[1,2:end] = vcat(loss(p_fit),p_fit_output)
