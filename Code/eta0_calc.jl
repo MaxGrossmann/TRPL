@@ -17,7 +17,12 @@ out = false
 
 ## parameters measurement data
 name_measurement = "sample1"
-N_DA = 5e16 # sample1: N_DA = 5e16, sample2: N_DA = 1e17
+
+if name_measurement == "sample1"
+    N_DA = 5e16 # sample1: N_DA = 5e16
+elseif name_measurement == "sample2"
+    N_DA = 1e17 # sample2: N_DA = 1e17
+end
 
 ## load measurement data
 data = Matrix(CSV.read(name_measurement*".csv",DataFrame,skipto=2))

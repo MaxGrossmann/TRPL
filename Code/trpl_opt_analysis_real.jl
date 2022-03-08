@@ -18,7 +18,11 @@ out = false
 
 ## parameters measurement data
 name_measurement = "sample1"
-N_DA = 5e16 # sample1: N_DA = 5e16, sample2: N_DA = 1e17
+if name_measurement == "sample1"
+    N_DA = 5e16 # sample1: N_DA = 5e16
+elseif name_measurement == "sample2"
+    N_DA = 1e17 # sample2: N_DA = 1e17
+end
 
 ## confidence level (1-α)
 alpha = 0.05 # corresponds to a 95% confidence level
