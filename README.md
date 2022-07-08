@@ -7,7 +7,7 @@ we would be grateful if you could cite our work.
 
 ## Disclaimer
 The provided optimization scripts 
-*trpl_opt_real.jl* and *trpl_opt_syn.jl* can be used in this repository for testing purposes only 
+*trpl_opt_real.jl* and *trpl_opt_syn.jl* should only be used testing purposes
 (output goes to "\TRPL\Optimizations\Test"). For a real optimziation one would start multiple optimization runs 
 using an additional script by changing lines 12-19 to ARGS[1], ARGS[2],... in *trpl_opt_real.jl* and *trpl_opt_syn.jl*
 
