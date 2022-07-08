@@ -1,5 +1,5 @@
 ## path to TRPL folder --> set it before running the code!
-path_to_trpl = "C:\\Users\\Max\\OneDrive\\Uni_Master\\TRPL\\Git\\TRPL" # some path to the TRPL folder (just an example here)
+path_to_trpl = "D:\\Projects\\TRPL" # some path to the TRPL folder (just an example here)
 
 ## activate package environment
 cd(@__DIR__)
@@ -14,10 +14,10 @@ using OrdinaryDiffEq, LinearAlgebra, BlackBoxOptim, ForwardDiff, DelimitedFiles,
 cd(joinpath(path_to_trpl,"Data\\Syn\\CSV"))
 
 ## output results? (true or false)
-out = true
+out = false
 
 ## index of synthetic data set
-idx_syn_data = 5
+idx_syn_data = 1
 
 ## confidence level (1-α)
 alpha = 0.05 # corresponds to a 95% confidence level
