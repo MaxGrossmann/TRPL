@@ -1,5 +1,5 @@
 ## path to TRPL folder --> set it before running the code!
-path_to_trpl = "D:\\Projects\\TRPL" # some path to the TRPL folder (just an example here)
+path_to_trpl = "C:\\Users\\Max\\OneDrive\\Uni_Master\\TRPL\\Git\\TRPL" # some path to the TRPL folder (just an example here)
 
 ## activate package environment
 cd(@__DIR__)
@@ -8,16 +8,16 @@ Pkg.activate("Project.toml")
 
 ## loading packages
 using OrdinaryDiffEq, LinearAlgebra, BlackBoxOptim, ForwardDiff, DelimitedFiles,
-	  Printf, Distributions, DataFrames, PGFPlots, CSV, XLSX, ColorSchemes, NLopt
+	  Printf, Distributions, DataFrames, CSV, XLSX, NLopt
 
 ## directory
 cd(joinpath(path_to_trpl,"Data\\Syn\\CSV"))
 
 ## output results? (true or false)
-out = false
+out = true
 
 ## index of synthetic data set
-idx_syn_data = 1
+idx_syn_data = 5
 
 ## confidence level (1-α)
 alpha = 0.05 # corresponds to a 95% confidence level
@@ -207,13 +207,32 @@ opt.maxtime = 600
 (optf,p_opt,ret) = optimize(opt,p_rescaled)
 
 ## calculate gradient
-g = ForwardDiff.gradient(loss_rescaled,p_opt)
+gL = ForwardDiff.gradient(loss_rescaled,p_opt)
 
 ## calculate hessian
-H = ForwardDiff.hessian(loss_rescaled,p_opt)
+HL = ForwardDiff.hessian(loss_rescaled,p_opt)
 
 ## calculate eigenvalues of the hessian
-e = eigvals(H)
+eL = eigvals(HL)
+
+## function to calculate the rescaled model gradient for the expection value of the hessian matrix (fisher information)
+function rescaled_lambda(par,eta0_idx,t_idx)
+    _par = inv(sf) * par
+    prob = ODEProblem(rate_equations, [_par[num_pars + eta0_idx], 0, 0], tspan, _par[1:num_pars])
+    sol = Array(solve(prob, Rosenbrock23(), saveat = t, save_idxs = [1],
+		      		  reltol = 1e-6, abstol = 1e-8))[1,:]
+    ipl = ((C_scaling * _par[num_pars] / ND[eta0_idx]) .* sol[t_idx] .* (sol[t_idx] .+ 1)) .+ background[eta0_idx]
+    return ipl
+end
+
+## calculate expection value of the hessian matrix (fisher information)
+grad_lambda(p,i,j) = ForwardDiff.gradient(x->rescaled_lambda(x,i,j),p)
+H = zeros(dims,dims)
+for i = 1:num_traj
+    for j = 1:length(t)
+        global H += (grad_lambda(p_opt,i,j) * grad_lambda(p_opt,i,j)')/rescaled_lambda(p_opt, i, j)
+    end
+end
 
 ## calculate standard errors of fit parameters
 se = inv(Diagonal(sf)) * inv(H) * inv(Diagonal(sf)) |> diag .|> sqrt
@@ -250,9 +269,9 @@ error_table[8,2:end] = vcat(["/"],lb)
 error_table[9,1] = "ub"
 error_table[9,2:end] = vcat(["/"],ub)
 error_table[10,1] = "gradient"
-error_table[10,2:end] = vcat(["/"],g)
+error_table[10,2:end] = vcat(["/"],gL)
 error_table[11,1] = "hessian eigenvalues (sorted)"
-error_table[11,2:end] = vcat(["/"],e)
+error_table[11,2:end] = vcat(["/"],eL)
 
 ## optimation result table
 opt_table = Array{Any}(undef,n_opt,dims+3)

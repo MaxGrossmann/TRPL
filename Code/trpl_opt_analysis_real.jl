@@ -191,13 +191,32 @@ opt.maxtime = 600
 (optf,p_opt,ret) = optimize(opt,p_rescaled)
 
 ## calculate gradient
-g = ForwardDiff.gradient(loss_rescaled,p_opt)
+gL = ForwardDiff.gradient(loss_rescaled,p_opt)
 
 ## calculate hessian
-H = ForwardDiff.hessian(loss_rescaled,p_opt)
+HL = ForwardDiff.hessian(loss_rescaled,p_opt)
 
 ## calculate eigenvalues of the hessian
-e = eigvals(H)
+eL = eigvals(HL)
+
+## function to calculate the rescaled model gradient for the expection value of the hessian matrix (fisher information)
+function rescaled_lambda(par,eta0_idx,t_idx)
+    _par = inv(sf) * par
+    prob = ODEProblem(rate_equations, [_par[num_pars + eta0_idx], 0, 0], tspan, _par[1:num_pars])
+    sol = Array(solve(prob, Rosenbrock23(), saveat = t, save_idxs = [1],
+		      		  reltol = 1e-6, abstol = 1e-8))[1,:]
+    ipl = ((C_scaling * _par[num_pars] / ND[eta0_idx]) .* sol[t_idx] .* (sol[t_idx] .+ 1)) .+ background[eta0_idx]
+    return ipl
+end
+
+## calculate expection value of the hessian matrix (fisher information)
+grad_lambda(p,i,j) = ForwardDiff.gradient(x->rescaled_lambda(x,i,j),p)
+H = zeros(dims,dims)
+for i = 1:num_traj
+    for j = 1:length(t)
+        global H += (grad_lambda(p_opt,i,j) * grad_lambda(p_opt,i,j)')/rescaled_lambda(p_opt, i, j)
+    end
+end
 
 ## calculate standard errors of fit parameters
 se = inv(sf) * inv(H) * inv(sf) |> diag .|> sqrt
@@ -226,9 +245,9 @@ par_table[4,2:end] = vcat(["/"],lb)
 par_table[5,1] = "ub"
 par_table[5,2:end] = vcat(["/"],ub)
 par_table[6,1] = "gradient"
-par_table[6,2:end] = vcat(["/"],g)
+par_table[6,2:end] = vcat(["/"],gL)
 par_table[7,1] = "hessian eigenvalues (sorted)"
-par_table[7,2:end] = vcat(["/"],e)
+par_table[7,2:end] = vcat(["/"],eL)
 
 ## optimation result table
 opt_table = Array{Any}(undef,n_opt,dims+3)
