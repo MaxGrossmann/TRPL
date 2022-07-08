@@ -6,8 +6,7 @@ If you use our data or software as part of your research, teaching, or other act
 we would be grateful if you could cite our work.
 
 ## Disclaimer
-Our two samples were provided by the *Fraunhofer ISE*. The measurements
-were made by *Klaus Schwarzburg* at the *Helmholtz-Zentrum Berlin*. The provided optimization scripts 
+The provided optimization scripts 
 *trpl_opt_real.jl* and *trpl_opt_syn.jl* can be used in this repository for testing purposes only 
 (output goes to "\TRPL\Optimizations\Test"). For a real optimziation one would start multiple optimization runs 
 using an additional script by changing lines 12-19 to ARGS[1], ARGS[2],... in *trpl_opt_real.jl* and *trpl_opt_syn.jl*
