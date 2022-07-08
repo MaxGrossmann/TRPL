@@ -264,18 +264,6 @@ par_table[5,2:end] = vcat(abs.(1 .- (loss(inv(sf)*p_opt) ./ loss(p_true))) * 100
 par_table[6,1] = "avg. rel. error in %"
 par_table[6,2:end] = vcat(["/"],mean(abs.(1 .- (inv(sf)*p_opt ./ p_true)) * 100),
 				            repeat(["/"],dims-1))
-<<<<<<< HEAD
-error_table[7,1] = "cihw95"
-error_table[7,2:end] = vcat(["/"],q*se_output)
-error_table[8,1] = "lb"
-error_table[8,2:end] = vcat(["/"],lb)
-error_table[9,1] = "ub"
-error_table[9,2:end] = vcat(["/"],ub)
-error_table[10,1] = "gradient"
-error_table[10,2:end] = vcat(["/"],gL)
-error_table[11,1] = "hessian eigenvalues (sorted)"
-error_table[11,2:end] = vcat(["/"],eL)
-=======
 par_table[7,1] = "cihw95"
 par_table[7,2:end] = vcat(["/"],q*se_output)
 par_table[8,1] = "lb"
@@ -283,10 +271,9 @@ par_table[8,2:end] = vcat(["/"],lb)
 par_table[9,1] = "ub"
 par_table[9,2:end] = vcat(["/"],ub)
 par_table[10,1] = "gradient"
-par_table[10,2:end] = vcat(["/"],g)
+par_table[10,2:end] = vcat(["/"],gL)
 par_table[11,1] = "hessian eigenvalues (sorted)"
-par_table[11,2:end] = vcat(["/"],e)
->>>>>>> b27bc01299502e09b997e52da0842edfb7dd61fb
+par_table[11,2:end] = vcat(["/"],eL)
 
 ## optimation result table
 opt_table = Array{Any}(undef,n_opt,dims+3)
