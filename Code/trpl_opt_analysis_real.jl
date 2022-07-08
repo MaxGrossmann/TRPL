@@ -18,7 +18,11 @@ out = false
 
 ## parameters measurement data
 name_measurement = "sample1"
-N_DA = 5e16 # sample1: N_DA = 5e16, sample2: N_DA = 1e17
+if name_measurement == "sample1"
+    N_DA = 5e16 # sample1: N_DA = 5e16
+elseif name_measurement == "sample2"
+    N_DA = 1e17 # sample2: N_DA = 1e17
+end
 
 ## confidence level (1-α)
 alpha = 0.05 # corresponds to a 95% confidence level
@@ -233,6 +237,8 @@ se_output = copy(se)
 se_output[7:8] = se_output[7:8] .* p_opt_output[7:8] .^2 ./ N_DA
 
 ## parameter table
+# p_fit is best global optimization result
+# p_opt is the final result after the reparameterized local optimization (started at p_fit)
 par_table = Array{Any}(undef,7,dims+2)
 par_table[1,1] = "p_fit"
 par_table[1,2:end] = vcat(loss(p_fit),p_fit_output)

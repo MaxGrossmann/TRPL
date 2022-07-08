@@ -18,17 +18,19 @@ name_syn = "syn_data_1" # name of synthetic data set
 n_iter = 2500 # number of optimization iteration and runs
 n_runs =  1 # number of optimization runs
 ftol_loc_opt = 1e-14 # tolerance for local optimization
-max_time_loc_opt = 15 # maixmum time for local optimization
-lb = vcat([   1,      1,   1,    1,    1,    1,    1,    1,    1,   1], 
-          repeat([1e-6],num_traj)) # lower parameter bounds
-ub = vcat([5000,  5000, 1000, 1000,  1e9, 1000,  1e4,  1e4, 1000, 1e6], 
-          repeat([ 1.0],10)) # upper parameter bounds
+max_time_loc_opt = 15 # maximum time in s for local optimization
+#          τ_r0,  τ_nr0, τ_2t, τ_1t, τ_1e, τ_1d,    α,    β,    r,   C 
+lb = vcat([   1,      1,    1,    1,    1,    1,    1,    1,    1,   1], 
+           repeat([1e-6],10)) # lower parameter bounds
+#          τ_r0,  τ_nr0, τ_2t, τ_1t, τ_1e, τ_1d,    α,    β,    r,   C 
+ub = vcat([5000,   5000, 1000, 1000,  1e9, 1000,  1e5,  1e5, 1000, 1e6], 
+           repeat([ 1.0],10)) # upper parameter bounds
 
 ## data directory
 cd(joinpath(path_to_trpl,"Data\\Syn\\CSV"))
 
 ## load measurement data
-data_syn = Matrix(CSV.read("syn_data_"*"$syn_data_idx"*".csv",DataFrame,skipto=2))
+data_syn = Matrix(CSV.read(name_syn*".csv",DataFrame,skipto=2))
 
 ## job directory
 cd(job_dir)
@@ -141,7 +143,7 @@ var_names_opt = vcat(["Run/Bounds","F_min", "τ_r0", "τ_nr0", "τ_2t",
 rename!(df_opt, var_names_opt)
 
 ## output results
-CSV.write("syn_data_$(syn_data_idx)_opt_res.csv", df_opt)
+CSV.write(name_syn*"_opt_res.csv", df_opt)
 
 ## message
 println("Script has finished")

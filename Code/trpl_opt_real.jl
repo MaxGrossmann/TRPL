@@ -18,11 +18,13 @@ name_measurement = "sample1" # name of measurement
 n_iter = 2500 # number of optimization iteration and runs
 n_runs =  1 # number of optimization runs
 ftol_loc_opt = 1e-14 # tolerance for local optimization
-max_time_loc_opt = 15 # maixmum time for local optimization
-lb = vcat([   1,      1,   1,    1,    1,    1,    1,    1,    1,   1], 
-          repeat([1e-6],10)) # lower parameter bounds
-ub = vcat([5000,  5000, 1000, 1000,  1e9, 1000,  1e4,  1e4, 1000, 1e6], 
-          repeat([ 1.0],10)) # upper parameter bounds
+max_time_loc_opt = 15 # maximum time in s for local optimization
+#          τ_r0,  τ_nr0, τ_2t, τ_1t, τ_1e, τ_1d,    α,    β,    r,   C 
+lb = vcat([   1,      1,    1,    1,    1,    1,    1,    1,    1,   1], 
+           repeat([1e-6],10)) # lower parameter bounds
+#          τ_r0,  τ_nr0, τ_2t, τ_1t, τ_1e, τ_1d,    α,    β,    r,   C 
+ub = vcat([5000,   5000, 1000, 1000,  1e9, 1000,  1e5,  1e5, 1000, 1e6], 
+           repeat([ 1.0],10)) # upper parameter bounds
 
 ## data directory
 cd(joinpath(path_to_trpl,"Data\\Real"))
