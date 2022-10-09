@@ -100,7 +100,7 @@ CIHW_fit = Float64.(sh["C4:K4"])
 p_fit = p_fit .± (CIHW_fit ./ q)
 
 ## compair to effective lifetime 
-tau_eff = round(sum([1/p_fit[i] for i = 1:4]) .^ -1,sigdigits=3)
+tau_eff = round(sum([1/p_fit[i] for i = 1:6]) .^ -1,sigdigits=3)
 println("\nτ_eff  = $tau_eff ns")
 
 ## write output
