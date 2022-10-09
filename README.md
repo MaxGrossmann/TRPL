@@ -1,6 +1,5 @@
 # Time-Resolved Photoluminescence (TRPL)
-**Multi-curve-fitting with shared kinetic model of intensity-\
-  dependent time-resolved photoluminescence measurements**
+**Generalized modelling of photoluminescence transients**
 
 If you use our data or software as part of your research, teaching, or other activities, \
 we would be grateful if you could cite our work.
