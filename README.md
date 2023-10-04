@@ -4,6 +4,8 @@
 If you use our data or software as part of your research, teaching, or other activities, \
 we would be grateful if you could cite our work.
 
+Generalized Modeling of Photoluminescence Transients - https://doi.org/10.1002/pssb.202200339
+
 ## Disclaimer
 The provided optimization scripts 
 *trpl_opt_real.jl* and *trpl_opt_syn.jl* should only be used testing purposes
